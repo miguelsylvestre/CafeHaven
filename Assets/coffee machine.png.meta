@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f88d4c7ee32a6424481d0f5b49055f3d
+guid: 768317312d8319c48bdd59d5e2847e7d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4253668446807853905
-    second: counterview-1.png (2)_0
+      213: -63441448042645356
+    second: appliances-1.png_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: counterview-1.png (2)_0
+      name: appliances-1.png_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 52
+        width: 42
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15b054c5ae0180b30800000000000000
-      internalID: 4253668446807853905
+      spriteID: 498b161d65c9e1ff0800000000000000
+      internalID: -63441448042645356
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      counterview-1.png (2)_0: 4253668446807853905
+      appliances-1.png_0: -63441448042645356
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
