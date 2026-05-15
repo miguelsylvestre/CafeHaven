@@ -30,9 +30,9 @@ public class PlayerMovement : MonoBehaviour
 
         moveInput = Vector2.zero;
         if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed) moveInput.x += 1;
-        if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed)  moveInput.x -= 1;
-        if (keyboard.wKey.isPressed || keyboard.upArrowKey.isPressed)    moveInput.y += 1;
-        if (keyboard.sKey.isPressed || keyboard.downArrowKey.isPressed)  moveInput.y -= 1;
+        if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed) moveInput.x -= 1;
+        if (keyboard.wKey.isPressed || keyboard.upArrowKey.isPressed) moveInput.y += 1;
+        if (keyboard.sKey.isPressed || keyboard.downArrowKey.isPressed) moveInput.y -= 1;
         moveInput = moveInput.normalized;
 
         if (animator != null)
