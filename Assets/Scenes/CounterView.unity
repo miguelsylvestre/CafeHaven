@@ -135,7 +135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &692929310
 SpriteRenderer:
   serializedVersion: 2
@@ -185,15 +185,15 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 6958460920357807163, guid: 129382421aa949d4e94405ebe38f856e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f88d4c7ee32a6424481d0f5b49055f3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 192, y: 48}
+  m_Size: {x: 192, y: 108}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!4 &692929311
 Transform:
@@ -265,10 +265,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.036957685
+    y: 0.037142858
+    width: 0.925549
+    height: 0.92571425
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -618,7 +618,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: f88d4c7ee32a6424481d0f5b49055f3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -650,7 +650,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1691190094}
-  - {fileID: 692929311}
   - {fileID: 1900448672}
   - {fileID: 1745655329}
+  - {fileID: 692929311}
   - {fileID: 2093952654}
