@@ -11,10 +11,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - TopDown
   - Water
   - UI
-  - 
+  - CounterView
   - 
   - 
   - 
@@ -41,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: topdown
+    uniqueID: 3874716163
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

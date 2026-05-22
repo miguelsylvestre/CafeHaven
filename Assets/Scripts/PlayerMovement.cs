@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 20f;
+    public static bool IsInMenu = false;
     Rigidbody2D rb;
     Vector2 moveInput;
     public Animator animator;
@@ -25,6 +26,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (IsInMenu)
+        {
+            moveInput = Vector2.zero;
+            if (animator != null)
+            {
+                animator.SetBool("Moving", false);
+            }
+            return;
+        }
+
         var keyboard = Keyboard.current;
         if (keyboard == null) return;
 
