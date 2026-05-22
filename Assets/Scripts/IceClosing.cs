@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class IceOpening : MonoBehaviour, IPointerClickHandler
+public class IceClosing : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] private GameObject iceOpen;
+    [SerializeField] private GameObject iceClosed;
     [SerializeField] private GameObject iceOpenShadow;
     [SerializeField] private GameObject iceClosedShadow;
     [SerializeField] private GameObject ice;
@@ -14,13 +14,13 @@ public class IceOpening : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (iceOpen != null && iceOpenShadow != null && iceClosedShadow != null && ice != null)
+        if (iceClosed != null && iceOpenShadow != null && iceClosedShadow != null && ice != null)
         {
-            iceOpen.SetActive(true);
-            iceOpenShadow.SetActive(true);
-            iceClosedShadow.SetActive(false);
+            iceClosed.SetActive(true);
+            iceOpenShadow.SetActive(false);
+            iceClosedShadow.SetActive(true);
             gameObject.SetActive(false);
-            ice.SetActive(true);
+            ice.SetActive(false);
         }
     }
 
