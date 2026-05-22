@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Background
   - appliance
+  - Trigger
   layers:
   - Default
   - TransparentFX
