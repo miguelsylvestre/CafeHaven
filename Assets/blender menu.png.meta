@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cb9096a9d783ef847954065e8fd6d3dd
+guid: a67323cb65a07414986c67b6f14bdabc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8414445453311855943
-    second: blender_0
+      213: -9127240932772983685
+    second: blender menu_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -56,7 +56,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 1
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -100,115 +100,33 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blender_0
+      name: blender menu_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 43
         y: 0
-        width: 24
-        height: 44
+        width: 53
+        height: 92
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b2327d1172e93b80800000000000000
-      internalID: -8414445453311855943
+      spriteID: b7c49a6dab6855180800000000000000
+      internalID: -9127240932772983685
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
     customData: 
-    physicsShape:
-    - - {x: 6, y: -21}
-      - {x: 7, y: -21}
-      - {x: 7, y: -20}
-      - {x: 8, y: -20}
-      - {x: 8, y: -16}
-      - {x: 7, y: -16}
-      - {x: 7, y: -12}
-      - {x: 6, y: -12}
-      - {x: 6, y: -8}
-      - {x: 5, y: -8}
-      - {x: 5, y: -7}
-      - {x: 4, y: -7}
-      - {x: 4, y: -1}
-      - {x: 5, y: -1}
-      - {x: 5, y: 1}
-      - {x: 9, y: 1}
-      - {x: 9, y: 2}
-      - {x: 10, y: 2}
-      - {x: 10, y: 3}
-      - {x: 11, y: 3}
-      - {x: 11, y: 4}
-      - {x: 12, y: 4}
-      - {x: 12, y: 13}
-      - {x: 11, y: 13}
-      - {x: 11, y: 14}
-      - {x: 10, y: 14}
-      - {x: 10, y: 15}
-      - {x: 7, y: 15}
-      - {x: 7, y: 16}
-      - {x: 8, y: 16}
-      - {x: 8, y: 17}
-      - {x: 9, y: 17}
-      - {x: 9, y: 19}
-      - {x: 8, y: 19}
-      - {x: 8, y: 20}
-      - {x: 3, y: 20}
-      - {x: 3, y: 21}
-      - {x: 2, y: 21}
-      - {x: 2, y: 22}
-      - {x: -5, y: 22}
-      - {x: -5, y: 21}
-      - {x: -6, y: 21}
-      - {x: -6, y: 20}
-      - {x: -11, y: 20}
-      - {x: -11, y: 19}
-      - {x: -12, y: 19}
-      - {x: -12, y: 17}
-      - {x: -11, y: 17}
-      - {x: -11, y: 16}
-      - {x: -10, y: 16}
-      - {x: -10, y: 10}
-      - {x: -9, y: 10}
-      - {x: -9, y: 4}
-      - {x: -8, y: 4}
-      - {x: -8, y: -1}
-      - {x: -7, y: -1}
-      - {x: -7, y: -7}
-      - {x: -8, y: -7}
-      - {x: -8, y: -8}
-      - {x: -9, y: -8}
-      - {x: -9, y: -12}
-      - {x: -10, y: -12}
-      - {x: -10, y: -16}
-      - {x: -11, y: -16}
-      - {x: -11, y: -20}
-      - {x: -10, y: -20}
-      - {x: -10, y: -21}
-      - {x: -9, y: -21}
-      - {x: -9, y: -22}
-      - {x: -5, y: -22}
-      - {x: -5, y: -21}
-      - {x: 2, y: -21}
-      - {x: 2, y: -22}
-      - {x: 6, y: -22}
-    - - {x: 6, y: 10}
-      - {x: 7, y: 10}
-      - {x: 7, y: 12}
-      - {x: 9, y: 12}
-      - {x: 9, y: 5}
-      - {x: 8, y: 5}
-      - {x: 8, y: 4}
-      - {x: 6, y: 4}
+    physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -217,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      blender_0: -8414445453311855943
+      blender menu_0: -9127240932772983685
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
