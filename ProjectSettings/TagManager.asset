@@ -50,5 +50,8 @@ TagManager:
   - name: appliance
     uniqueID: 3667778353
     locked: 0
+  - name: menus
+    uniqueID: 1693378841
+    locked: 0
   m_RenderingLayers:
   - Default
