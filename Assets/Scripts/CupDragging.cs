@@ -10,7 +10,6 @@ public class CupDragging : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public Sprite hoverImg;
     public Sprite dropImg;
-    public Vector2 dropResultSize;
 
     private Sprite originalDragSprite;
     private Sprite originalHoverTargetSprite;
