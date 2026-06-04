@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a0442a6da0f638741815c6869120b1a0
+guid: 988bf55ad99274c3e8ea18731aec46d9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1208440650218828078
-    second: blender menu bg_0
+      213: -2060337549914847601
+    second: counter 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blender menu bg_0
+      name: counter 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 108
+        width: 6
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e217f686e5e35c010800000000000000
-      internalID: 1208440650218828078
+      spriteID: f864deb1ae53863e0800000000000000
+      internalID: -2060337549914847601
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      blender menu bg_0: 1208440650218828078
+      counter 1_0: -2060337549914847601
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a7a2fc07791be314598c70d70a37967c
+guid: 300a10103a48e3d4fa52aaeb5ee7aedb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4260860286652062055
-    second: tall cup up_0
+      213: 5569082654309334150
+    second: fridge door closed_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tall cup up_0
+      name: fridge door closed_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 17
-        height: 26
+        width: 30
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 996e880f4226ed4c0800000000000000
-      internalID: -4260860286652062055
+      spriteID: 68cb5e6fa2b594d40800000000000000
+      internalID: 5569082654309334150
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tall cup up_0: -4260860286652062055
+      fridge door closed_0: 5569082654309334150
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

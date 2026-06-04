@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 55f56a42b5350a945b0d3656402c9619
+guid: 9ce450817a5b95340b3f31c6843624b9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8963066544400902989
-    second: ice closed shadow_0
+      213: -5730769498379182517
+    second: tall cup hover_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ice closed shadow_0
+      name: tall cup hover_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 4
-        width: 61
-        height: 21
+        x: 3
+        y: 0
+        width: 19
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4b2435a885336c70800000000000000
-      internalID: 8963066544400902989
+      spriteID: b4e177f01873870b0800000000000000
+      internalID: -5730769498379182517
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ice closed shadow_0: 8963066544400902989
+      tall cup hover_0: -5730769498379182517
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

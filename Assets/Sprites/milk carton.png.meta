@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7b5240a99e093e94fb51aba614cfb0f2
+guid: 5f0c9d66b127bb145891d6865b9e6f4d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8719339029316588960
-    second: coffee machine menu_0
+      213: 1190999715756889915
+    second: milk carton_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: coffee machine menu_0
+      name: milk carton_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 1
-        width: 111
-        height: 103
+        x: 0
+        y: 0
+        width: 11
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a55d9e66a0510970800000000000000
-      internalID: 8719339029316588960
+      spriteID: b37d7496ee7478010800000000000000
+      internalID: 1190999715756889915
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      coffee machine menu_0: 8719339029316588960
+      milk carton_0: 1190999715756889915
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

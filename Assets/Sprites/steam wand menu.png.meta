@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f6d5232b1e973774f83cb3263ded3253
+guid: b007557bbbfbf8642b6de2f57c47f061
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8019561758289530658
-    second: coffee machine menu bg_0
+      213: 1908079185298631986
+    second: steam wand menu_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: coffee machine menu bg_0
+      name: steam wand menu_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 134
-        height: 106
+        x: 70
+        y: 2
+        width: 45
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22f87210ee43b4f60800000000000000
-      internalID: 8019561758289530658
+      spriteID: 23daa0bd8ebda7a10800000000000000
+      internalID: 1908079185298631986
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      coffee machine menu bg_0: 8019561758289530658
+      steam wand menu_0: 1908079185298631986
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

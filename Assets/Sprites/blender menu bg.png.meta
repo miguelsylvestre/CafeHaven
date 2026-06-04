@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bd81e1fc27675c54b827be85e32073f2
+guid: a0442a6da0f638741815c6869120b1a0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8073009559334848638
-    second: steam wand menu bg_0
+      213: 1208440650218828078
+    second: blender menu bg_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,11 +96,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: steam wand menu bg_0
+      name: blender menu bg_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 28773831498e6ff80800000000000000
-      internalID: -8073009559334848638
+      spriteID: e217f686e5e35c010800000000000000
+      internalID: 1208440650218828078
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      steam wand menu bg_0: -8073009559334848638
+      blender menu bg_0: 1208440650218828078
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

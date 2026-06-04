@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0483830315c3c0c4abeb26c1aaadb81f
+guid: 4e36c10a2cf30054fb00b2dabd62f8f6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5739897283171119737
-    second: fridge_0
+      213: -4128848561154329441
+    second: ice closed_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fridge_0
+      name: ice closed_0
       rect:
         serializedVersion: 2
-        x: 142
-        y: 4
-        width: 29
-        height: 32
+        x: 23
+        y: 6
+        width: 59
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 972f4a2fa2638af40800000000000000
-      internalID: 5739897283171119737
+      spriteID: f947305fb1263b6c0800000000000000
+      internalID: -4128848561154329441
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fridge_0: 5739897283171119737
+      ice closed_0: -4128848561154329441
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

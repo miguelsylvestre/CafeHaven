@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 684b0a194aa83f34fa178efe93cbafe7
+guid: 7b5240a99e093e94fb51aba614cfb0f2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2215172386916370809
-    second: small cup hover_0
+      213: 8719339029316588960
+    second: coffee machine menu_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: small cup hover_0
+      name: coffee machine menu_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 25
-        height: 18
+        x: 7
+        y: 1
+        width: 111
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 786789953702241e0800000000000000
-      internalID: -2215172386916370809
+      spriteID: 0a55d9e66a0510970800000000000000
+      internalID: 8719339029316588960
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      small cup hover_0: -2215172386916370809
+      coffee machine menu_0: 8719339029316588960
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

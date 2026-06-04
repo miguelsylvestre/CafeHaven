@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cb9096a9d783ef847954065e8fd6d3dd
+guid: e29d50aca6a444d4ab075bec56789faf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8414445453311855943
-    second: blender_0
+      213: -2077772884679034096
+    second: ice open_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -56,7 +56,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 1
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -96,119 +96,50 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blender_0
+      name: ice open_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 24
-        height: 44
+        x: 23
+        y: 6
+        width: 59
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b2327d1172e93b80800000000000000
-      internalID: -8414445453311855943
+      spriteID: 01b74c4e1944a23e0800000000000000
+      internalID: -2077772884679034096
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
     customData: 
-    physicsShape:
-    - - {x: 6, y: -21}
-      - {x: 7, y: -21}
-      - {x: 7, y: -20}
-      - {x: 8, y: -20}
-      - {x: 8, y: -16}
-      - {x: 7, y: -16}
-      - {x: 7, y: -12}
-      - {x: 6, y: -12}
-      - {x: 6, y: -8}
-      - {x: 5, y: -8}
-      - {x: 5, y: -7}
-      - {x: 4, y: -7}
-      - {x: 4, y: -1}
-      - {x: 5, y: -1}
-      - {x: 5, y: 1}
-      - {x: 9, y: 1}
-      - {x: 9, y: 2}
-      - {x: 10, y: 2}
-      - {x: 10, y: 3}
-      - {x: 11, y: 3}
-      - {x: 11, y: 4}
-      - {x: 12, y: 4}
-      - {x: 12, y: 13}
-      - {x: 11, y: 13}
-      - {x: 11, y: 14}
-      - {x: 10, y: 14}
-      - {x: 10, y: 15}
-      - {x: 7, y: 15}
-      - {x: 7, y: 16}
-      - {x: 8, y: 16}
-      - {x: 8, y: 17}
-      - {x: 9, y: 17}
-      - {x: 9, y: 19}
-      - {x: 8, y: 19}
-      - {x: 8, y: 20}
-      - {x: 3, y: 20}
-      - {x: 3, y: 21}
-      - {x: 2, y: 21}
-      - {x: 2, y: 22}
-      - {x: -5, y: 22}
-      - {x: -5, y: 21}
-      - {x: -6, y: 21}
-      - {x: -6, y: 20}
-      - {x: -11, y: 20}
-      - {x: -11, y: 19}
-      - {x: -12, y: 19}
-      - {x: -12, y: 17}
-      - {x: -11, y: 17}
-      - {x: -11, y: 16}
-      - {x: -10, y: 16}
-      - {x: -10, y: 10}
-      - {x: -9, y: 10}
-      - {x: -9, y: 4}
-      - {x: -8, y: 4}
-      - {x: -8, y: -1}
-      - {x: -7, y: -1}
-      - {x: -7, y: -7}
-      - {x: -8, y: -7}
-      - {x: -8, y: -8}
-      - {x: -9, y: -8}
-      - {x: -9, y: -12}
-      - {x: -10, y: -12}
-      - {x: -10, y: -16}
-      - {x: -11, y: -16}
-      - {x: -11, y: -20}
-      - {x: -10, y: -20}
-      - {x: -10, y: -21}
-      - {x: -9, y: -21}
-      - {x: -9, y: -22}
-      - {x: -5, y: -22}
-      - {x: -5, y: -21}
-      - {x: 2, y: -21}
-      - {x: 2, y: -22}
-      - {x: 6, y: -22}
-    - - {x: 6, y: 10}
-      - {x: 7, y: 10}
-      - {x: 7, y: 12}
-      - {x: 9, y: 12}
-      - {x: 9, y: 5}
-      - {x: 8, y: 5}
-      - {x: 8, y: 4}
-      - {x: 6, y: 4}
+    physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -217,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      blender_0: -8414445453311855943
+      ice open_0: -2077772884679034096
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
