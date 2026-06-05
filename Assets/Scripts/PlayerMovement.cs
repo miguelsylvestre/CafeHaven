@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     Vector2 moveInput;
     public Animator animator;
     public SpriteRenderer rend;
+    public Collider2D interactionTrigger;
+    public Collider2D physics;
 
     public static PlayerMovement Instance;
 

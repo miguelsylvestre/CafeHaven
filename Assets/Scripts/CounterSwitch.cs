@@ -22,11 +22,23 @@ public class CounterSwitch : MonoBehaviour, IInteractable
         }
     }
     
-    public void Interact() {
+    public void Interact() 
+    {
 
     }
 
-    public bool CanInteract() {
+    public void Close()
+    {
+        
+    }
 
+    public KeyCode GetInteractKey()
+    {
+        return KeyCode.E;
+    }
+
+    public bool CanInteract()
+    {
+        return true;
     }
 }
