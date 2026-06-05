@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CounterSwitch : MonoBehaviour
+public class CounterSwitch : MonoBehaviour, IInteractable
 {
     public string sceneName;
     private bool hasLoadedOnce = false;
@@ -20,5 +20,13 @@ public class CounterSwitch : MonoBehaviour
                 }
             }
         }
+    }
+    
+    public void Interact() {
+
+    }
+
+    public bool CanInteract() {
+
     }
 }

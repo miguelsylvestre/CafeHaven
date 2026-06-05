@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -59,6 +60,13 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("Moving", false);
             }
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (!interactionTrigger.IsTouching(other) || !other.isTrigger || physics.IsTouching(other)) return;
+
+        IInteractable interactable = other.GetComponent<IInteractable>();
+        
     }
 
     void FixedUpdate()
