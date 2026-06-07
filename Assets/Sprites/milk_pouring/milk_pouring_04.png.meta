@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4c5b59ef83b7db44fbda47e6268847ed
+guid: b178f2e4cbaa9b84cbb4196202e4bf7a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1310764857583365154
-    second: steam wand_0
+      213: 6013858140032391164
+    second: milk_pouring_04_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,14 +49,14 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 1
+  alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 1
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -96,76 +96,37 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: steam wand_0
+      name: milk_pouring_04_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 0
-        width: 23
-        height: 48
+        x: 70
+        y: 45
+        width: 35
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed39da78e4a3fcde0800000000000000
-      internalID: -1310764857583365154
+      spriteID: cf7d8369d14857350800000000000000
+      internalID: 6013858140032391164
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
     customData: 
-    physicsShape:
-    - - {x: 5.5, y: -11}
-      - {x: 5.5, y: -8}
-      - {x: 4.5, y: -7}
-      - {x: 4.5, y: 9}
-      - {x: 1.5, y: 12}
-      - {x: -1.5, y: 12}
-      - {x: -2.5, y: 11}
-      - {x: -2.5, y: 9}
-      - {x: -1.5, y: 8}
-      - {x: -4.5, y: 5}
-      - {x: -4.5, y: 0}
-      - {x: -4.5, y: 0}
-      - {x: -5.5, y: -1}
-      - {x: -5.5, y: -7}
-      - {x: -4.5, y: -8}
-      - {x: -3.5, y: -8}
-      - {x: -2.5, y: -7}
-      - {x: -2.5, y: -4}
-      - {x: -1.5, y: -3}
-      - {x: -1.5, y: 3}
-      - {x: -0.5, y: 3}
-      - {x: -0.5, y: -7}
-      - {x: -1.5, y: -8}
-      - {x: -1.5, y: -11}
-      - {x: -0.5, y: -12}
-      - {x: 4.5, y: -12}
+    physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -174,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      steam wand_0: -1310764857583365154
+      milk_pouring_04_0: 6013858140032391164
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

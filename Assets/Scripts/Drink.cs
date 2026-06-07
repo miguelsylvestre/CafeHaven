@@ -1,4 +1,6 @@
-public class Drink
+using System;
+
+[Serializable] public class Drink
 {
     public DrinkTypes type;
 
@@ -11,7 +13,8 @@ public class Drink
     public Water water;
 }
 
-public class Milk
+
+[Serializable] public class Milk
 {
     public bool steamed;
     public bool frothed;
@@ -19,7 +22,7 @@ public class Milk
     public bool cold;
 }
 
-public class Water
+[Serializable] public class Water
 {
     public float amount;
     public bool cold;
