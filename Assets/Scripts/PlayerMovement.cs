@@ -10,8 +10,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 moveInput;
     public Animator animator;
     public SpriteRenderer rend;
-    public Collider2D interactionTrigger;
-    public Collider2D physics;
+    private IInteractable currentInteractable;
 
     public static PlayerMovement Instance;
 
@@ -39,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
+
         var keyboard = Keyboard.current;
         if (keyboard == null) return;
 
@@ -62,13 +62,31 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("Moving", false);
             }
         }
+        if (currentInteractable != null)
+        {
+            if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
+            {
+                currentInteractable.Interact();
+            }
+        }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (!interactionTrigger.IsTouching(other) || !other.isTrigger || physics.IsTouching(other)) return;
-
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         IInteractable interactable = other.GetComponent<IInteractable>();
-        
+        if (interactable == null || !interactable.CanInteract()) return;
+
+        currentInteractable = interactable;
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        IInteractable interactable = other.GetComponent<IInteractable>();
+
+        if (interactable != null && interactable == currentInteractable)
+        {
+            currentInteractable = null;
+        }
     }
 
     void FixedUpdate()
