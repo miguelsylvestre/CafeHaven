@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c23c7651e0d8f684e95f6aea5408f618
+guid: c228ceb9de6674d4fa41aaa835c248b1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2576284699205098495
-    second: big milk_0
+      213: -8912262200407570520
+    second: milk carton pouring_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: big milk_0
+      name: milk carton pouring_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 33
-        height: 54
+        x: 85
+        y: 55
+        width: 59
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1042b9f37b23f3cd0800000000000000
-      internalID: -2576284699205098495
+      spriteID: 8a7c0977fb8415480800000000000000
+      internalID: -8912262200407570520
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      big milk_0: -2576284699205098495
+      milk carton pouring_0: -8912262200407570520
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
