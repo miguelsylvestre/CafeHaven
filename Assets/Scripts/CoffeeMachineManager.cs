@@ -79,6 +79,8 @@ public class CoffeeMachinePanel : MonoBehaviour
         if (contents != null)
             contents.SetDrink(pendingDrink);
 
+        claimObject.SetActive(false);
+        resetObject.SetActive(false);
         ResetPanel();
     }
 
