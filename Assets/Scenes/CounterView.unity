@@ -545,7 +545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2232,11 +2232,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1525621246}
+  m_Father: {fileID: 2103284374}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -38.5, y: 10.5}
+  m_AnchoredPosition: {x: -18.999996, y: -4.000002}
   m_SizeDelta: {x: 9, y: 9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &441954073
@@ -2282,7 +2282,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 441954074}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2103284375}
+        m_TargetAssemblyTypeName: CoffeeMachinePanel, Assembly-CSharp
+        m_MethodName: OnPour
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &441954074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3093,8 +3105,8 @@ GameObject:
   - component: {fileID: 951453456}
   - component: {fileID: 951453455}
   - component: {fileID: 951453454}
-  - component: {fileID: 951453453}
   - component: {fileID: 951453452}
+  - component: {fileID: 951453457}
   m_Layer: 5
   m_Name: ClaimDrink1
   m_TagString: Untagged
@@ -3145,20 +3157,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 951453454}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &951453453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951453451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0479565b49dda4346abd80436b053be8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CupDropSlot
-  occupied: 0
+      m_Calls:
+      - m_Target: {fileID: 2103284375}
+        m_TargetAssemblyTypeName: CoffeeMachinePanel, Assembly-CSharp
+        m_MethodName: OnClaim
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 240649913}
+        m_TargetAssemblyTypeName: CupDragging, Assembly-CSharp
+        m_MethodName: ResetLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &951453454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3172,7 +3195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3216,6 +3239,18 @@ RectTransform:
   m_AnchoredPosition: {x: -25.5, y: -25}
   m_SizeDelta: {x: 27, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &951453457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951453451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830d0225fad5046cfbc08fdd5fa3fb9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClaimDrink
 --- !u!1 &1046925930
 GameObject:
   m_ObjectHideFlags: 0
@@ -4647,8 +4682,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 441954072}
-  - {fileID: 2038561237}
   - {fileID: 1293729750}
   - {fileID: 43777644}
   - {fileID: 951453456}
@@ -5816,10 +5849,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.3713542
+    y: 0.02222222
+    width: 0.70000005
+    height: 0.7
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -6264,6 +6297,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2038561237}
   - {fileID: 1294995671}
   - {fileID: 1570972367}
   - {fileID: 1077470484}
@@ -6778,11 +6812,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1525621246}
+  m_Father: {fileID: 1880916728}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 38.5, y: 10.5}
+  m_AnchoredPosition: {x: 20, y: -4.0000005}
   m_SizeDelta: {x: 9, y: 9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2038561239
@@ -7081,6 +7115,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 441954072}
   - {fileID: 1660768428}
   - {fileID: 143089829}
   - {fileID: 168052345}
