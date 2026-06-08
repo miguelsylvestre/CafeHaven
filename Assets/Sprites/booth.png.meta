@@ -116,10 +116,10 @@ TextureImporter:
       name: booth_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 136
-        height: 12
+        x: 55
+        y: 95
+        width: 137
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

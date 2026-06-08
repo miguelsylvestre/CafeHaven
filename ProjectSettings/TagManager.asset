@@ -41,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: floor
+    uniqueID: 2590438307
+    locked: 0
   - name: topdown
     uniqueID: 3874716163
     locked: 0
