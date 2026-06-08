@@ -8,7 +8,11 @@ public class Recipes
             new Drink
             {
                 type = DrinkTypes.Espresso,
-                intensity = 3
+                coffee = 
+                    new Coffee
+                    {
+                        intensity = 3
+                    }
             }
         },
 
@@ -17,7 +21,11 @@ public class Recipes
             new Drink
             {
                 type = DrinkTypes.Latte,
-                intensity = 2,
+                coffee = 
+                    new Coffee
+                    {
+                        intensity = 2
+                    },
                 milk =
                     new Milk
                     {
@@ -32,7 +40,11 @@ public class Recipes
             new Drink
             {
                 type = DrinkTypes.IcedLatte,
-                intensity = 2,
+                coffee = 
+                    new Coffee
+                    {
+                        intensity = 2
+                    },
                 hasIce = true,
                 milk =
                     new Milk
@@ -48,7 +60,11 @@ public class Recipes
             new Drink
             {
                 type = DrinkTypes.Cappuccino,
-                intensity = 2,
+                coffee = 
+                    new Coffee
+                    {
+                        intensity = 2
+                    },
                 milk =
                     new Milk
                     {
@@ -63,7 +79,11 @@ public class Recipes
             new Drink
             {
                 type = DrinkTypes.Americano,
-                intensity = 2,
+                coffee = 
+                    new Coffee
+                    {
+                        intensity = 2
+                    },
                 water =
                     new Water
                     {
@@ -77,7 +97,11 @@ public class Recipes
             new Drink
             {
                 type = DrinkTypes.ColdAmericano,
-                intensity = 2,
+                coffee = 
+                    new Coffee
+                    {
+                        intensity = 2
+                    },
                 hasIce = true,
                 water =
                     new Water
@@ -92,11 +116,19 @@ public class Recipes
     public static Drink GetRecipe(DrinkTypes type)
     {
         Drink recipe = baseRecipes[type];
+
         return new Drink
         {
             type = recipe.type,
-            intensity = recipe.intensity,
+            syrupFlavor = recipe.syrupFlavor,
+            size = recipe.size,
             hasIce = recipe.hasIce,
+
+            coffee = recipe.coffee == null ? null : new Coffee
+            {
+                decaf = recipe.coffee.decaf,
+                intensity = recipe.coffee.intensity
+            },
 
             milk = recipe.milk == null ? null : new Milk
             {

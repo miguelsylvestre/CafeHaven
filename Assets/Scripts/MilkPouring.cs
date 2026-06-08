@@ -16,7 +16,7 @@ public class MilkPouring : MonoBehaviour,
     [SerializeField] private Sprite milkCartonPouring;   
 
     [SerializeField] private RectTransform milkFillImage;
-    [SerializeField] private CupContents currentCup;
+    [SerializeField] private MilkCupContents currentCup;
 
     private Milk currentMilk;
 

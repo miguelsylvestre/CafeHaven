@@ -4,8 +4,7 @@ using System;
 {
     public DrinkTypes type;
 
-    public bool decaf;
-    public int intensity;
+    public Coffee coffee;
     public SyrupTypes syrupFlavor;
     public Milk milk;
     public Sizes size;
@@ -13,6 +12,11 @@ using System;
     public Water water;
 }
 
+[Serializable] public class Coffee
+{
+    public bool decaf;
+    public int intensity;
+}
 
 [Serializable] public class Milk
 {

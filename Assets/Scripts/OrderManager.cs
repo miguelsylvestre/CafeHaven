@@ -8,7 +8,7 @@ public class OrderManager : MonoBehaviour
     {
         order = Recipes.GetRecipe(DrinkTypes.Latte);
         order.syrupFlavor = SyrupTypes.None;
-        order.decaf = false;
+        order.coffee.decaf = false;
         order.size = Sizes.Tall;
     }
 
