@@ -1495,6 +1495,8 @@ MonoBehaviour:
   dropImg: {fileID: 21300000, guid: 9ce450817a5b95340b3f31c6843624b9, type: 3}
   ResetDrink1: {fileID: 43777640}
   ResetDrink2: {fileID: 148235048}
+  Panel1: {fileID: 2103284373}
+  Panel2: {fileID: 1880916727}
 --- !u!114 &240649914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3056,6 +3058,8 @@ MonoBehaviour:
   dropImg: {fileID: 21300000, guid: 9ce450817a5b95340b3f31c6843624b9, type: 3}
   ResetDrink1: {fileID: 43777640}
   ResetDrink2: {fileID: 148235048}
+  Panel1: {fileID: 2103284373}
+  Panel2: {fileID: 1880916727}
 --- !u!114 &933090261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3601,7 +3605,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1250968363
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4030,6 +4034,8 @@ MonoBehaviour:
   dropImg: {fileID: 21300000, guid: 684b0a194aa83f34fa178efe93cbafe7, type: 3}
   ResetDrink1: {fileID: 43777640}
   ResetDrink2: {fileID: 148235048}
+  Panel1: {fileID: 2103284373}
+  Panel2: {fileID: 1880916727}
 --- !u!114 &1339674068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5849,10 +5855,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.3713542
-    y: 0.02222222
-    width: 0.70000005
-    height: 0.7
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -6331,6 +6337,7 @@ MonoBehaviour:
   pourButton: {fileID: 2038561241}
   resetObject: {fileID: 148235048}
   claimObject: {fileID: 1689445259}
+  dragObject: {fileID: 31187955}
   cupObject: {fileID: 281721985}
   selectedColor: {r: 0.6, g: 0.9, b: 0.6, a: 1}
   deselectedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -6957,6 +6964,8 @@ MonoBehaviour:
   dropImg: {fileID: 21300000, guid: 684b0a194aa83f34fa178efe93cbafe7, type: 3}
   ResetDrink1: {fileID: 43777640}
   ResetDrink2: {fileID: 148235048}
+  Panel1: {fileID: 2103284373}
+  Panel2: {fileID: 1880916727}
 --- !u!114 &2040921899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7149,6 +7158,7 @@ MonoBehaviour:
   pourButton: {fileID: 441954073}
   resetObject: {fileID: 43777640}
   claimObject: {fileID: 951453451}
+  dragObject: {fileID: 1293729749}
   cupObject: {fileID: 223170003}
   selectedColor: {r: 0.6, g: 0.9, b: 0.6, a: 1}
   deselectedColor: {r: 1, g: 1, b: 1, a: 1}

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CoffeeMachinePanel : MonoBehaviour
+public class CoffeeMachineManager : MonoBehaviour
 {
     [SerializeField] private Button decafButton;
     [SerializeField] private Button regularButton;
@@ -14,6 +14,7 @@ public class CoffeeMachinePanel : MonoBehaviour
 
     [SerializeField] private GameObject resetObject;
     [SerializeField] private GameObject claimObject;
+    [SerializeField] private GameObject dragObject;
     [SerializeField] private GameObject cupObject;
 
     [SerializeField] private Color selectedColor = new Color(0.6f, 0.9f, 0.6f, 1f);
@@ -85,9 +86,10 @@ public class CoffeeMachinePanel : MonoBehaviour
     }
 
 
-    void RefreshPourButton()
+    public void RefreshPourButton()
     {
-        pourButton.interactable = (isDecaf.HasValue && intensity != 0);
+        CupDropSlot occupied = dragObject.GetComponent<CupDropSlot>(); 
+        pourButton.interactable = (isDecaf.HasValue && intensity != 0 && occupied.occupied);
     }
 
     public void ResetPanel()

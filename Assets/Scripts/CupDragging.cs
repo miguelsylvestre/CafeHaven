@@ -23,6 +23,8 @@ public class CupDragging : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     [SerializeField] private GameObject ResetDrink1;
     [SerializeField] private GameObject ResetDrink2;
+    [SerializeField] private GameObject Panel1;
+    [SerializeField] private GameObject Panel2;
 
     void Start()
     {
@@ -150,6 +152,8 @@ public class CupDragging : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                     targetImage.sprite = dropImg;
                 targetImage.color = new Color(targetImage.color.r, targetImage.color.g, targetImage.color.b, 1f);
                 slot.occupied = true;
+                Panel1.GetComponent<CoffeeMachineManager>().RefreshPourButton();
+                Panel2.GetComponent<CoffeeMachineManager>().RefreshPourButton();
             }
         }
 
