@@ -21,6 +21,9 @@ public class CupDragging : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private Vector3 originalPosition;
 
+    [SerializeField] private GameObject ResetDrink1;
+    [SerializeField] private GameObject ResetDrink2;
+
     void Start()
     {
         originalPosition = GetComponent<RectTransform>().position;
@@ -29,6 +32,20 @@ public class CupDragging : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         canvas = GetComponentInParent<Canvas>();
         raycaster = canvas.GetComponent<GraphicRaycaster>();
+    }
+
+    public void Update()
+    {
+        CupDropSlot slotLeft = cupDragLeft.GetComponent<CupDropSlot>();
+        CupDropSlot slotRight = cupDragRight.GetComponent<CupDropSlot>();
+        if (slotLeft.occupied)
+        {
+            ResetDrink1.SetActive(true);
+        } else ResetDrink1.SetActive(false);
+        if (slotRight.occupied)
+        {
+            ResetDrink2.SetActive(true);
+        } else ResetDrink2.SetActive(false);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -140,5 +157,27 @@ public class CupDragging : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         dragImage.raycastTarget = true;
         GetComponent<RectTransform>().position = originalPosition;
         currentlyHovered = null;
+    }
+
+    public void ResetLeft()
+    {
+        CupDropSlot slot = cupDragLeft.GetComponent<CupDropSlot>();
+        Image img = cupDragLeft.GetComponent<Image>();
+
+        slot.occupied = false;
+
+        img.sprite = originalHoverTargetSprite;
+        img.color = new Color(img.color.r, img.color.g, img.color.b, 0f);
+    }
+
+    public void ResetRight()
+    {
+        CupDropSlot slot = cupDragRight.GetComponent<CupDropSlot>();
+        Image img = cupDragRight.GetComponent<Image>();
+
+        slot.occupied = false;
+
+        img.sprite = originalHoverTargetSprite;
+        img.color = new Color(img.color.r, img.color.g, img.color.b, 0f);
     }
 }
