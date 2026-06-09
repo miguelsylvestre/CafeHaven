@@ -666,7 +666,6 @@ GameObject:
   - component: {fileID: 270254122}
   - component: {fileID: 270254121}
   - component: {fileID: 270254120}
-  - component: {fileID: 270254123}
   m_Layer: 3
   m_Name: Backcounter
   m_TagString: Untagged
@@ -708,11 +707,11 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -93, y: 24}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6, y: 60}
+    oldSize: {x: 192, y: 108}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -769,7 +768,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 988bf55ad99274c3e8ea18731aec46d9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f23571d681fe841f0867053d193290e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -787,27 +786,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270254119}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -93, y: 24, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1693405168}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &270254123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 270254119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7b59113924fd41ff85b53d0ff972750, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CounterSwitch
-  sceneName: CounterView
 --- !u!1 &324259329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,6 +1827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1693405168}
   - component: {fileID: 1693405169}
+  - component: {fileID: 1693405170}
   m_Layer: 3
   m_Name: CounterTrigger
   m_TagString: Untagged
@@ -1857,7 +1844,7 @@ Transform:
   m_GameObject: {fileID: 1693405167}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -93, y: 24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1897,7 +1884,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 3, y: 0}
+  m_Offset: {x: 7, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1907,8 +1894,21 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 6, y: 60}
+  m_Size: {x: 8, y: 60}
   m_EdgeRadius: 0
+--- !u!114 &1693405170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693405167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b59113924fd41ff85b53d0ff972750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CounterSwitch
+  sceneName: CounterView
 --- !u!1 &1698975114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1964,10 +1964,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0171875
-    y: 0.042592593
-    width: 1
-    height: 1
+    x: 0.01875
+    y: 0.76574075
+    width: 0.3
+    height: 0.29999998
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60

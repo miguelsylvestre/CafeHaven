@@ -21,6 +21,8 @@ public class CupDragging : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private Vector3 originalPosition;
 
+    public bool isPouring;
+
     [SerializeField] private GameObject ResetDrink1;
     [SerializeField] private GameObject ResetDrink2;
     [SerializeField] private GameObject Panel1;
@@ -42,9 +44,12 @@ public class CupDragging : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         CupDropSlot slotRight = cupDragRight.GetComponent<CupDropSlot>();
         if (slotLeft.occupied)
         {
-            ResetDrink1.SetActive(true);
-        } else ResetDrink1.SetActive(false);
-        if (slotRight.occupied)
+            CoffeeMachineManager cmm = Panel1.GetComponent<CoffeeMachineManager>();
+            cmm.resetField();
+        //     ResetDrink1.SetActive(true);
+        // } else ResetDrink1.SetActive(false);
+        }
+        if (slotRight.occupied && !isPouring)
         {
             ResetDrink2.SetActive(true);
         } else ResetDrink2.SetActive(false);

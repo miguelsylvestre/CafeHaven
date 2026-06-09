@@ -1,8 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using TMPro;
 
 public class CoffeeMachineManager : MonoBehaviour
 {
+    public bool isPouring;
+    public bool ready;
+
     [SerializeField] private Button decafButton;
     [SerializeField] private Button regularButton;
 
@@ -11,6 +16,7 @@ public class CoffeeMachineManager : MonoBehaviour
     [SerializeField] private Button highButton;
 
     [SerializeField] private Button pourButton;
+    [SerializeField] private TextMeshProUGUI timerText;
 
     [SerializeField] private GameObject resetObject;
     [SerializeField] private GameObject claimObject;
@@ -21,6 +27,11 @@ public class CoffeeMachineManager : MonoBehaviour
     private bool? isDecaf = null;
     private int intensity = 0;
     private Drink pendingDrink = null;
+
+    void Start()
+    {
+        // timerText.SetActive(false);
+    }
 
 
     public void SelectDecaf(bool decaf)
@@ -56,10 +67,43 @@ public class CoffeeMachineManager : MonoBehaviour
             }
         };
 
-        resetObject.SetActive(false);
-        claimObject.SetActive(true);
+        StartCoroutine(Pouring());
 
         SetAllButtonsInteractable(false);
+    }
+    
+    public void resetField()
+    {
+        if (!isPouring && !ready) {
+            resetObject.SetActive(true);
+        } else resetObject.SetActive(false);
+    }
+
+    private IEnumerator Pouring()
+    {
+        float remaining = 12f;
+        resetObject.SetActive(false);
+        // timerText.setActive(true);
+        isPouring = true;
+        ready = false;
+
+        while (remaining > 0f)
+        {
+            remaining -= Time.deltaTime;
+            updateTimeUI(remaining);
+            yield return null;
+        }
+        // timerText.setActive(false);
+        isPouring = false;
+        ready = true;
+        claimObject.SetActive(true);
+    }
+
+    private void updateTimeUI(float remaining)
+    {
+        int minutes = Mathf.FloorToInt(remaining / 60f);
+        int seconds = Mathf.FloorToInt(remaining % 60f);
+        timerText.text = $"{minutes:00}:{seconds:00}";
     }
 
     public void OnClaim()
@@ -74,9 +118,9 @@ public class CoffeeMachineManager : MonoBehaviour
 
         claimObject.SetActive(false);
         resetObject.SetActive(false);
+        ready = false;
         ResetPanel();
     }
-
 
     public void RefreshPourButton()
     {
@@ -99,7 +143,7 @@ public class CoffeeMachineManager : MonoBehaviour
         RefreshPourButton();
 
         claimObject.SetActive(false);
-        resetObject.SetActive(true);
+        resetObject.SetActive(false);
     }
 
     void SetAllButtonsInteractable(bool state)
