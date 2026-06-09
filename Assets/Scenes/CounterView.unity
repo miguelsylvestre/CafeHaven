@@ -499,6 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CupDropSlot
   occupied: 0
+  side: 1
 --- !u!1 &43777640
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CupDropSlot
   occupied: 0
+  side: 0
 --- !u!114 &43777642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1062,6 +1064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CupDropSlot
   occupied: 0
+  side: 0
 --- !u!114 &148235050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1075,7 +1078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1358,6 +1361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 223170004}
   - component: {fileID: 223170005}
+  - component: {fileID: 223170006}
   m_Layer: 0
   m_Name: cup
   m_TagString: Untagged
@@ -1439,6 +1443,38 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &223170006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223170003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e2d2fe9a674e1245b6f34a2bb88475a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CupContents
+  drink:
+    type: 0
+    coffee:
+      decaf: 0
+      intensity: 0
+    syrupFlavor: 0
+    milk:
+      steamed: 0
+      frothed: 0
+      amount: 0
+      cold: 0
+    size: 0
+    hasIce: 0
+    water:
+      amount: 0
+      cold: 0
+  filled: 0
+  cupImage: {fileID: 223170005}
+  tallSprite: {fileID: 21300000, guid: 22950c346cd697b49a1f30f74e42cc59, type: 3}
+  smallSprite: {fileID: 21300000, guid: b0c4daeb41a234545b46f66a81e66fda, type: 3}
 --- !u!1 &240649911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,6 +1529,7 @@ MonoBehaviour:
   cupDragRight: {fileID: 31187955}
   hoverImg: {fileID: 21300000, guid: 9ce450817a5b95340b3f31c6843624b9, type: 3}
   dropImg: {fileID: 21300000, guid: 9ce450817a5b95340b3f31c6843624b9, type: 3}
+  size: 0
   isPouring: 0
   ResetDrink1: {fileID: 43777640}
   ResetDrink2: {fileID: 148235048}
@@ -2550,7 +2587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &693416566
 Transform:
   m_ObjectHideFlags: 0
@@ -3102,6 +3139,7 @@ MonoBehaviour:
   cupDragRight: {fileID: 31187955}
   hoverImg: {fileID: 21300000, guid: 9ce450817a5b95340b3f31c6843624b9, type: 3}
   dropImg: {fileID: 21300000, guid: 9ce450817a5b95340b3f31c6843624b9, type: 3}
+  size: 0
   isPouring: 0
   ResetDrink1: {fileID: 43777640}
   ResetDrink2: {fileID: 148235048}
@@ -3652,7 +3690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1250968363
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3764,6 +3802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CupDropSlot
   occupied: 0
+  side: 0
 --- !u!1 &1294995670
 GameObject:
   m_ObjectHideFlags: 0
@@ -4079,6 +4118,7 @@ MonoBehaviour:
   cupDragRight: {fileID: 31187955}
   hoverImg: {fileID: 21300000, guid: 684b0a194aa83f34fa178efe93cbafe7, type: 3}
   dropImg: {fileID: 21300000, guid: 684b0a194aa83f34fa178efe93cbafe7, type: 3}
+  size: 1
   isPouring: 0
   ResetDrink1: {fileID: 43777640}
   ResetDrink2: {fileID: 148235048}
@@ -5790,6 +5830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CupDropSlot
   occupied: 0
+  side: 0
 --- !u!114 &1689445262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5803,7 +5844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6440,8 +6481,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
   m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ReferencePixelsPerUnit: 1
+  m_ScaleFactor: 10
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -7058,7 +7099,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2038561239}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1880916729}
+        m_TargetAssemblyTypeName: CoffeeMachineManager, Assembly-CSharp
+        m_MethodName: OnPour
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2040921896
 GameObject:
   m_ObjectHideFlags: 0
@@ -7113,6 +7166,7 @@ MonoBehaviour:
   cupDragRight: {fileID: 31187955}
   hoverImg: {fileID: 21300000, guid: 684b0a194aa83f34fa178efe93cbafe7, type: 3}
   dropImg: {fileID: 21300000, guid: 684b0a194aa83f34fa178efe93cbafe7, type: 3}
+  size: 1
   isPouring: 0
   ResetDrink1: {fileID: 43777640}
   ResetDrink2: {fileID: 148235048}
@@ -7469,7 +7523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2108409162
 Transform:
   m_ObjectHideFlags: 0

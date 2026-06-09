@@ -10,6 +10,7 @@ public class CupDragging : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public Sprite hoverImg;
     public Sprite dropImg;
+    public Sizes size;
 
     private Sprite originalDragSprite;
     private Sprite originalHoverTargetSprite;
@@ -49,10 +50,11 @@ public class CupDragging : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         //     ResetDrink1.SetActive(true);
         // } else ResetDrink1.SetActive(false);
         }
-        if (slotRight.occupied && !isPouring)
+        if (slotRight.occupied)
         {
-            ResetDrink2.SetActive(true);
-        } else ResetDrink2.SetActive(false);
+            CoffeeMachineManager cmm = Panel2.GetComponent<CoffeeMachineManager>();
+            cmm.resetField();
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -157,8 +159,15 @@ public class CupDragging : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                     targetImage.sprite = dropImg;
                 targetImage.color = new Color(targetImage.color.r, targetImage.color.g, targetImage.color.b, 1f);
                 slot.occupied = true;
-                Panel1.GetComponent<CoffeeMachineManager>().RefreshPourButton();
-                Panel2.GetComponent<CoffeeMachineManager>().RefreshPourButton();
+                if (slot.side == 0){
+                    Panel1.GetComponent<CoffeeMachineManager>().RefreshPourButton();
+                    Panel1.GetComponent<CoffeeMachineManager>().UpdateSize(size);
+                }
+                else
+                {
+                    Panel2.GetComponent<CoffeeMachineManager>().RefreshPourButton();
+                    Panel2.GetComponent<CoffeeMachineManager>().UpdateSize(size);
+                }
             }
         }
 

@@ -27,6 +27,7 @@ public class CoffeeMachineManager : MonoBehaviour
     private bool? isDecaf = null;
     private int intensity = 0;
     private Drink pendingDrink = null;
+    private Sizes size;
 
     void Start()
     {
@@ -60,23 +61,25 @@ public class CoffeeMachineManager : MonoBehaviour
     {
         pendingDrink = new Drink
         {
+            size = size,
             coffee = new Coffee
             {
                 decaf = isDecaf.Value,
                 intensity = intensity
             }
         };
-
         StartCoroutine(Pouring());
 
         SetAllButtonsInteractable(false);
     }
-    
+
     public void resetField()
     {
-        if (!isPouring && !ready) {
+        if (!isPouring && !ready)
+        {
             resetObject.SetActive(true);
-        } else resetObject.SetActive(false);
+        }
+        else resetObject.SetActive(false);
     }
 
     private IEnumerator Pouring()
@@ -110,11 +113,19 @@ public class CoffeeMachineManager : MonoBehaviour
     {
         if (pendingDrink == null) return;
 
-        cupObject.SetActive(true);
 
         CupContents contents = cupObject.GetComponent<CupContents>();
-        if (contents != null)
-            contents.SetDrink(pendingDrink);
+        if (contents == null) return;
+
+        if (contents.filled)
+        {
+            Debug.Log("finish the other freaking cup bro.");
+            return;
+        }
+
+        contents.SetDrink(pendingDrink);
+        contents.updateCup();
+        cupObject.SetActive(true);
 
         claimObject.SetActive(false);
         resetObject.SetActive(false);
@@ -126,6 +137,11 @@ public class CoffeeMachineManager : MonoBehaviour
     {
         CupDropSlot occupied = dragObject.GetComponent<CupDropSlot>();
         pourButton.interactable = (isDecaf.HasValue && intensity != 0 && occupied.occupied);
+    }
+
+    public void UpdateSize(Sizes s)
+    {
+        size = s;
     }
 
     public void ResetPanel()
