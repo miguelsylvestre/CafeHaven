@@ -1362,6 +1362,7 @@ GameObject:
   - component: {fileID: 223170004}
   - component: {fileID: 223170005}
   - component: {fileID: 223170006}
+  - component: {fileID: 223170007}
   m_Layer: 0
   m_Name: cup
   m_TagString: Untagged
@@ -1475,6 +1476,52 @@ MonoBehaviour:
   cupImage: {fileID: 223170005}
   tallSprite: {fileID: 21300000, guid: 22950c346cd697b49a1f30f74e42cc59, type: 3}
   smallSprite: {fileID: 21300000, guid: b0c4daeb41a234545b46f66a81e66fda, type: 3}
+--- !u!61 &223170007
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223170003}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 6, y: 15}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 11, y: 18}
+    newSize: {x: 16, y: 16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 15, y: 18}
+  m_EdgeRadius: 0
 --- !u!1 &240649911
 GameObject:
   m_ObjectHideFlags: 0
@@ -2587,7 +2634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &693416566
 Transform:
   m_ObjectHideFlags: 0
@@ -5328,7 +5375,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1635658640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7517,13 +7564,15 @@ GameObject:
   m_Component:
   - component: {fileID: 2108409162}
   - component: {fileID: 2108409163}
+  - component: {fileID: 2108409164}
+  - component: {fileID: 2108409165}
   m_Layer: 0
   m_Name: ice scoop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2108409162
 Transform:
   m_ObjectHideFlags: 0
@@ -7598,6 +7647,77 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2108409164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108409161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9d99c570fcbef41b574a2224ee93b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IceFilling
+  dragSprite: {fileID: 21300000, guid: 823407d4a6073474994101d398d9a04e, type: 3}
+  dropSprite: {fileID: 21300000, guid: 03695c6013d6d44a68e179a31c05cb07, type: 3}
+  dropDisplayTime: 1
+  cup: {fileID: 223170003}
+  tallHoverSprite: {fileID: 21300000, guid: 74b6d7e05e92dfe4caeb37ea2a2c5feb, type: 3}
+  smallHoverSprite: {fileID: 21300000, guid: fb730ae00881e5d4d906d50dd15d96c0, type: 3}
+--- !u!60 &2108409165
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108409161}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 1}
+    oldSize: {x: 15, y: 10}
+    newSize: {x: 15, y: 10}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2, y: 0}
+      - {x: 0, y: -3}
+      - {x: 0, y: -10}
+      - {x: 15, y: -10}
+      - {x: 15, y: -3}
+      - {x: 12, y: 0}
+  m_UseDelaunayMesh: 1
 --- !u!1 &2125412203
 GameObject:
   m_ObjectHideFlags: 0
