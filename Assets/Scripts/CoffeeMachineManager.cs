@@ -17,8 +17,6 @@ public class CoffeeMachineManager : MonoBehaviour
     [SerializeField] private GameObject dragObject;
     [SerializeField] private GameObject cupObject;
 
-    [SerializeField] private Color selectedColor = new Color(0.6f, 0.9f, 0.6f, 1f);
-    [SerializeField] private Color deselectedColor = Color.white;
 
     private bool? isDecaf = null;
     private int intensity = 0;
@@ -32,9 +30,6 @@ public class CoffeeMachineManager : MonoBehaviour
         SetButtonInteractable(decafButton, !decaf);
         SetButtonInteractable(regularButton, decaf);
 
-        SetButtonColor(decafButton, decaf ? selectedColor : deselectedColor);
-        SetButtonColor(regularButton, !decaf ? selectedColor : deselectedColor);
-
         RefreshPourButton();
     }
 
@@ -46,9 +41,6 @@ public class CoffeeMachineManager : MonoBehaviour
         SetButtonInteractable(mediumButton, level != 2);
         SetButtonInteractable(highButton, level != 3);
 
-        SetButtonColor(lowButton, level == 1 ? selectedColor : deselectedColor);
-        SetButtonColor(mediumButton, level == 2 ? selectedColor : deselectedColor);
-        SetButtonColor(highButton, level == 3 ? selectedColor : deselectedColor);
 
         RefreshPourButton();
     }
@@ -88,7 +80,7 @@ public class CoffeeMachineManager : MonoBehaviour
 
     public void RefreshPourButton()
     {
-        CupDropSlot occupied = dragObject.GetComponent<CupDropSlot>(); 
+        CupDropSlot occupied = dragObject.GetComponent<CupDropSlot>();
         pourButton.interactable = (isDecaf.HasValue && intensity != 0 && occupied.occupied);
     }
 
@@ -103,12 +95,6 @@ public class CoffeeMachineManager : MonoBehaviour
         SetButtonInteractable(lowButton, true);
         SetButtonInteractable(mediumButton, true);
         SetButtonInteractable(highButton, true);
-
-        SetButtonColor(decafButton, deselectedColor);
-        SetButtonColor(regularButton, deselectedColor);
-        SetButtonColor(lowButton, deselectedColor);
-        SetButtonColor(mediumButton, deselectedColor);
-        SetButtonColor(highButton, deselectedColor);
 
         RefreshPourButton();
 
@@ -127,9 +113,4 @@ public class CoffeeMachineManager : MonoBehaviour
     }
 
     static void SetButtonInteractable(Button btn, bool state) => btn.interactable = state;
-    static void SetButtonColor(Button btn, Color color)
-    {
-        Image img = btn.GetComponent<Image>();
-        if (img != null) img.color = color;
-    }
 }
