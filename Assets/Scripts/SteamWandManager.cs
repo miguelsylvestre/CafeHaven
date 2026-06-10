@@ -4,22 +4,25 @@ using UnityEngine.EventSystems;
 
 public class SteamWandManager : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [SerializeField] private RectTransform milkCupRect;
-    [SerializeField] private MilkCupContents milkCupContents;
+    [SerializeField] private Image milk;
+    [SerializeField] private RectTransform milkT;
+    [SerializeField] private RectTransform backCup;
+    [SerializeField] private Image steamWand;
+    [SerializeField] private Sprite steamWandNormal;
+    [SerializeField] private Sprite steamWandOn;
+    [SerializeField] private Button button;
+    [SerializeField] private MilkCupContents contents;
     [SerializeField] private RectTransform zone;
     [SerializeField] private RectTransform frothLine;
-    [SerializeField] private Button steamButton;
+    [SerializeField] private RectTransform frontCup;
 
-    [SerializeField] private Image steamWandImage;
-    [SerializeField] private Sprite wandNormal;
-    [SerializeField] private Sprite wandOn;
 
-    [SerializeField] private float heightMin;
-    [SerializeField] private float heightMax;
+
 
     private const float time = 10f;
 
     private Vector2 startPosition;
+    private RectTransform rectTransform;
     private bool isOnWand = false;
     private bool isSteaming = false;
     private float steamTimer = 0f;
@@ -28,14 +31,16 @@ public class SteamWandManager : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     private void Start()
     {
         canvas = GetComponentInParent<Canvas>();
-        startPosition = milkCupRect.anchoredPosition;
-        steamButton.onClick.AddListener(OnSteamButtonClicked);
-        steamButton.interactable = false;
-        UpdateCupHeight();
+        rectTransform = GetComponent<RectTransform>();
+        startPosition = rectTransform.anchoredPosition;
+        button.interactable = false;
+        button.gameObject.SetActive(false);
+        UpdateMilkHeight();
     }
 
     private void Update()
     {
+        backCup.anchoredPosition = rectTransform.anchoredPosition;
         if (isSteaming)
         {
             steamTimer += Time.deltaTime;
@@ -49,91 +54,108 @@ public class SteamWandManager : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (isSteaming) return;
+        if (isSteaming || contents == null || contents.milk == null || contents.milk.steamed || contents.milk.frothed) return;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         if (isSteaming) return;
 
-        milkCupRect.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        Vector2 localPoint;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            canvas.transform as RectTransform,
+            eventData.position,
+            canvas.worldCamera,
+            out localPoint
+        );
+
+        rectTransform.anchoredPosition = localPoint;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         if (isSteaming) return;
 
-        Vector2 pos = milkCupRect.anchoredPosition;
-        milkCupRect.anchoredPosition = new Vector2(
-            Mathf.Round(pos.x),
-            Mathf.Round(pos.y)
-        );
-
         isOnWand = IsOverWand();
-        steamButton.interactable = isOnWand && milkCupContents != null && milkCupContents.milk != null;
+        if (isOnWand && contents != null && contents.milk.amount >= 75)
+        {
+            Vector2 currentPos = rectTransform.anchoredPosition;
+            float snappedX = Mathf.Floor(currentPos.x) + 0.5f;
+            float snappedY = Mathf.Floor(currentPos.y) + 0.5f;
+            rectTransform.anchoredPosition = new Vector2(snappedX, snappedY);
+            button.interactable = isOnWand && contents != null && contents.milk != null;
+            button.gameObject.SetActive(button.interactable);
+        }
+        else
+        {
+            rectTransform.anchoredPosition = startPosition;
+        }
+        
     }
 
     private bool IsOverWand()
     {
-        return RectTransformUtility.RectangleContainsScreenPoint(
-            zone,
-            RectTransformUtility.WorldToScreenPoint(null, milkCupRect.position),
-            null
-        );
+        Canvas canvas = GetComponentInParent<Canvas>();
+        Camera uiCamera = canvas.worldCamera;
+
+        if (uiCamera == null)
+        {
+            return false;
+        }
+        Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(uiCamera, transform.position);
+        return RectTransformUtility.RectangleContainsScreenPoint(zone, screenPoint, uiCamera);
     }
 
     private bool IsAboveFrothLine()
     {
-        return milkCupRect.anchoredPosition.y > frothLine.anchoredPosition.y;
+        return rectTransform.anchoredPosition.y > frothLine.anchoredPosition.y;
     }
 
-    private void OnSteamButtonClicked()
+    public void OnSteamButtonClicked()
     {
         if (!isOnWand || isSteaming) return;
-        if (milkCupContents == null || milkCupContents.milk == null) return;
+        if (contents == null || contents.milk == null) return;
 
         isSteaming = true;
         steamTimer = 0f;
-        steamButton.interactable = false;
+        button.interactable = false;
+        button.gameObject.SetActive(false);
 
-        if (steamWandImage != null && wandOn != null)
-            steamWandImage.sprite = wandOn;
+        if (steamWand != null && steamWandOn != null)
+            steamWand.sprite = steamWandOn;
     }
 
     private void FinishSteaming()
     {
         isSteaming = false;
 
-        if (milkCupContents.milk != null)
+        if (contents.milk != null)
         {
             if (IsAboveFrothLine())
             {
-                milkCupContents.milk.frothed = true;
-                milkCupContents.milk.steamed = false;
+                contents.milk.frothed = true;
             }
             else
             {
-                milkCupContents.milk.steamed = true;
-                milkCupContents.milk.frothed = false;
+                contents.milk.steamed = true;
             }
         }
 
-        milkCupRect.anchoredPosition = startPosition;
+        rectTransform.anchoredPosition = startPosition;
         isOnWand = false;
 
-        if (steamWandImage != null && wandNormal != null)
-            steamWandImage.sprite = wandNormal;
+        if (steamWand != null && steamWandNormal != null)
+            steamWand.sprite = steamWandNormal;
     }
 
-    private void UpdateCupHeight()
+    public void UpdateMilkHeight()
     {
-        if (milkCupContents == null || milkCupContents.milk == null) return;
-
-        const float STARTING_ML = 25f;
-        const float ML_PER_PIXEL = 8.33333f;
-
-        float pixels = Mathf.FloorToInt((milkCupContents.milk.amount - STARTING_ML) / ML_PER_PIXEL);
-        float t = pixels / 22f;
-        float y = Mathf.Lerp(heightMin, heightMax, t);
+        if (contents == null || contents.milk == null)
+        {
+            milk.gameObject.SetActive(false);
+            return;
+        }
+        float pixelsToMoveDown = 25f - (0.12f * contents.milk.amount);
+        milkT.anchoredPosition = new Vector2(milkT.anchoredPosition.x, 26.5f - pixelsToMoveDown);
     }
 }

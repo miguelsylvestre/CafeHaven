@@ -2524,9 +2524,8 @@ GameObject:
   - component: {fileID: 337518384}
   - component: {fileID: 337518386}
   - component: {fileID: 337518385}
-  - component: {fileID: 337518387}
   m_Layer: 5
-  m_Name: SteamWandMenu
+  m_Name: SteamWandItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2543,8 +2542,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 394221881}
+  m_Children: []
   m_Father: {fileID: 399598268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2590,28 +2588,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337518383}
   m_CullTransparentMesh: 1
---- !u!114 &337518387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337518383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d73e0b624364d5d4e8107876b5e31aae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SteamWandManager
-  milkCupRect: {fileID: 1732210194}
-  milkCupContents: {fileID: 1627213746}
-  zone: {fileID: 0}
-  frothLine: {fileID: 0}
-  steamButton: {fileID: 394221882}
-  steamWandImage: {fileID: 337518385}
-  wandNormal: {fileID: 0}
-  wandOn: {fileID: 0}
-  heightMin: -12
-  heightMax: 11
 --- !u!1 &341558689
 GameObject:
   m_ObjectHideFlags: 0
@@ -2845,17 +2821,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394221880}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 337518384}
+  m_Father: {fileID: 399598268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25, y: 0}
-  m_SizeDelta: {x: 192, y: 108}
+  m_AnchoredPosition: {x: 23, y: 39}
+  m_SizeDelta: {x: 14, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &394221882
 MonoBehaviour:
@@ -2876,7 +2852,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2900,7 +2876,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 394221883}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2103148505}
+        m_TargetAssemblyTypeName: SteamWandManager, Assembly-CSharp
+        m_MethodName: OnSteamButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &394221883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2967,12 +2955,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1214515894}
-  - {fileID: 754584810}
-  - {fileID: 337518384}
-  - {fileID: 1732210194}
   - {fileID: 85562334}
   - {fileID: 1805638088}
+  - {fileID: 1214515894}
+  - {fileID: 337518384}
+  - {fileID: 754584810}
+  - {fileID: 588640589}
+  - {fileID: 2103148502}
+  - {fileID: 394221881}
   m_Father: {fileID: 315571232}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3565,6 +3555,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 192, y: 108}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &588640588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 588640589}
+  - component: {fileID: 588640591}
+  - component: {fileID: 588640590}
+  m_Layer: 5
+  m_Name: Wand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &588640589
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588640588}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 399598268}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 25, y: 0}
+  m_SizeDelta: {x: 192, y: 108}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &588640590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588640588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5fd175d6148ecb043909ebe45998972e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &588640591
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588640588}
+  m_CullTransparentMesh: 1
 --- !u!1 &620652844
 GameObject:
   m_ObjectHideFlags: 0
@@ -4110,7 +4175,6 @@ GameObject:
   - component: {fileID: 754584810}
   - component: {fileID: 754584812}
   - component: {fileID: 754584811}
-  - component: {fileID: 754584813}
   m_Layer: 5
   m_Name: milk cup back steam
   m_TagString: Untagged
@@ -4129,14 +4193,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2125562333}
   m_Father: {fileID: 399598268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24.277939, y: -14.940266}
-  m_SizeDelta: {x: 192, y: 108}
-  m_Pivot: {x: 0.3735524, y: 0.3616642}
+  m_AnchoredPosition: {x: -26.500484, y: -16.499512}
+  m_SizeDelta: {x: 57, y: 61}
+  m_Pivot: {x: 0.50000006, y: 0.5}
 --- !u!114 &754584811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4157,7 +4222,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e53b25c09eadf3940aed70e8e0f1d670, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6401419b07529d843a0d309514e42b73, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4175,20 +4240,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754584809}
   m_CullTransparentMesh: 1
---- !u!114 &754584813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754584809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba544d98c8e45d445bd68b81055139aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MirrorPos
-  target: {fileID: 1732210194}
-  offset: {x: 0, y: 0}
 --- !u!1 &773052976
 GameObject:
   m_ObjectHideFlags: 0
@@ -8289,43 +8340,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
---- !u!1 &1732210193
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1732210194}
-  m_Layer: 5
-  m_Name: milk cup steam
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1732210194
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1732210193}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2125562333}
-  - {fileID: 2103148502}
-  m_Father: {fileID: 399598268}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24.277939, y: -14.940269}
-  m_SizeDelta: {x: 192, y: 108}
-  m_Pivot: {x: 0.3735524, y: 0.36166418}
 --- !u!1 &1745655327
 GameObject:
   m_ObjectHideFlags: 0
@@ -9850,6 +9864,7 @@ GameObject:
   - component: {fileID: 2103148502}
   - component: {fileID: 2103148504}
   - component: {fileID: 2103148503}
+  - component: {fileID: 2103148505}
   m_Layer: 5
   m_Name: milk cup front steam
   m_TagString: Untagged
@@ -9869,12 +9884,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1732210194}
+  m_Father: {fileID: 399598268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 192, y: 108}
+  m_AnchoredPosition: {x: -26.5, y: -16.5}
+  m_SizeDelta: {x: 57, y: 61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2103148503
 MonoBehaviour:
@@ -9896,7 +9911,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6bb084430f13ac94c82888fe333c1bd0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0184ce4bb190a5a44b15bfca98a3e8b1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9914,6 +9929,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103148501}
   m_CullTransparentMesh: 1
+--- !u!114 &2103148505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103148501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73e0b624364d5d4e8107876b5e31aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SteamWandManager
+  milk: {fileID: 2125562334}
+  milkT: {fileID: 2125562333}
+  backCup: {fileID: 754584810}
+  steamWand: {fileID: 337518385}
+  steamWandNormal: {fileID: 21300000, guid: b007557bbbfbf8642b6de2f57c47f061, type: 3}
+  steamWandOn: {fileID: 21300000, guid: 776633336f221754ea0bf700b2920141, type: 3}
+  button: {fileID: 394221882}
+  contents: {fileID: 1627213746}
+  zone: {fileID: 85562334}
+  frothLine: {fileID: 1805638088}
+  frontCup: {fileID: 2103148502}
 --- !u!1 &2103284373
 GameObject:
   m_ObjectHideFlags: 0
@@ -10253,11 +10291,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1732210194}
+  m_Father: {fileID: 754584810}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -43, y: 11}
+  m_AnchoredPosition: {x: -16.5, y: 27.5}
   m_SizeDelta: {x: 38, y: 21}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2125562334
