@@ -1,0 +1,34 @@
+M	Assets/Fonts/GrapeSoda SDF.asset
+M	Assets/Scenes/CounterView.unity
+M	Assets/Scripts/CoffeeMachineManager.cs
+M	Assets/Scripts/Enums.cs
+A	Assets/Scripts/SyrupManager.cs
+A	Assets/Scripts/SyrupManager.cs.meta
+A	Assets/Sprites/SmallCupSyrup.png
+A	Assets/Sprites/SmallCupSyrup.png.meta
+A	Assets/Sprites/TallCupSyrup.png
+A	Assets/Sprites/TallCupSyrup.png.meta
+A	Assets/Sprites/caramel menu bg.png
+A	Assets/Sprites/caramel menu bg.png.meta
+A	Assets/Sprites/caramel menu.png
+A	Assets/Sprites/caramel menu.png.meta
+A	Assets/Sprites/caramel pressed.png
+A	Assets/Sprites/caramel pressed.png.meta
+A	Assets/Sprites/caramell.png.png
+A	Assets/Sprites/caramell.png.png.meta
+A	Assets/Sprites/mocha menu bg.png
+A	Assets/Sprites/mocha menu bg.png.meta
+A	Assets/Sprites/mocha menu.png
+A	Assets/Sprites/mocha menu.png.meta
+A	Assets/Sprites/mocha pressed.png
+A	Assets/Sprites/mocha pressed.png.meta
+A	Assets/Sprites/mocha.png
+A	Assets/Sprites/mocha.png.meta
+A	Assets/Sprites/vanilla menu bg.png
+A	Assets/Sprites/vanilla menu bg.png.meta
+A	Assets/Sprites/vanilla menu.png
+A	Assets/Sprites/vanilla menu.png.meta
+A	Assets/Sprites/vanilla pressed.png
+A	Assets/Sprites/vanilla pressed.png.meta
+A	Assets/Sprites/vanilla.png
+A	Assets/Sprites/vanilla.png.meta

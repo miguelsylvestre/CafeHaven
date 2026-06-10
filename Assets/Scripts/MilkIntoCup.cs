@@ -11,8 +11,8 @@ public class MilkIntoCup : MonoBehaviour
     [SerializeField] private Image milkFront;
     [SerializeField] private Image frame1;
     [SerializeField] private Sprite[] animationFrames;
-    [SerializeField] private float heightMin = -22f;
-    [SerializeField] private float heightMax = 0f;
+    [SerializeField] private float heightMin;
+    [SerializeField] private float heightMax;
     private Image selfImage;
 
     private const float FPS = 4f;
