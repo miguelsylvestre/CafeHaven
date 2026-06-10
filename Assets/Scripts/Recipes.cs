@@ -113,15 +113,15 @@ public class Recipes
         }
 
     };
-    public static Drink GetRecipe(DrinkTypes type)
+    public static Drink GetRecipe(DrinkTypes type, Sizes size)
     {
         Drink recipe = baseRecipes[type];
 
-        return new Drink
+        Drink drink = new Drink
         {
             type = recipe.type,
+            size = size,
             syrupFlavor = recipe.syrupFlavor,
-            size = recipe.size,
             hasIce = recipe.hasIce,
 
             coffee = recipe.coffee == null ? null : new Coffee
@@ -144,5 +144,16 @@ public class Recipes
                 cold = recipe.water.cold
             }
         };
+
+        if (size == Sizes.Tall)
+        {
+            if (drink.milk != null)
+                drink.milk.amount += 50;
+
+            if (drink.water != null)
+                drink.water.amount += 50;
+        }
+
+        return drink;
     }
 }

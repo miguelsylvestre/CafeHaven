@@ -6,10 +6,10 @@ public class OrderManager : MonoBehaviour
     public Drink order;
     void Start()
     {
-        order = Recipes.GetRecipe(DrinkTypes.Latte);
+        order.size = Sizes.Tall;
+        order = Recipes.GetRecipe(DrinkTypes.Latte, order.size);
         order.syrupFlavor = SyrupTypes.None;
         order.coffee.decaf = false;
-        order.size = Sizes.Tall;
     }
 
     // Update is called once per frame
