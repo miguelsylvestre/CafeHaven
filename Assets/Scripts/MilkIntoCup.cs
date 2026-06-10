@@ -43,6 +43,8 @@ public class MilkIntoCup : MonoBehaviour
 
     private void Update()
     {
+        UpdateHeight();
+
         if (!isPlaying)
         {
             if (frame1 != null)

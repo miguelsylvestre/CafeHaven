@@ -2308,8 +2308,8 @@ MonoBehaviour:
   - {fileID: 8160740982285313921, guid: 28f9550355539cc4695131cbb1f28845, type: 3}
   - {fileID: 6182008923381164981, guid: 28f9550355539cc4695131cbb1f28845, type: 3}
   - {fileID: -4556001471701863997, guid: 28f9550355539cc4695131cbb1f28845, type: 3}
-  heightMin: -24.5
-  heightMax: -1.5
+  heightMin: -24
+  heightMax: -1
 --- !u!1 &315571231
 GameObject:
   m_ObjectHideFlags: 0
