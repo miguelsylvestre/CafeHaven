@@ -811,8 +811,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.8759, y: -20.7976}
-  m_SizeDelta: {x: 26.4871, y: 53.9908}
+  m_AnchoredPosition: {x: 5.6519, y: -27.859}
+  m_SizeDelta: {x: 28.935, y: 39.868}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &88460398
 GameObject:
@@ -2956,6 +2956,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 85562334}
+  - {fileID: 1047914364}
+  - {fileID: 1900715654}
   - {fileID: 1805638088}
   - {fileID: 1214515894}
   - {fileID: 337518384}
@@ -5247,6 +5249,41 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1047914363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1047914364}
+  m_Layer: 5
+  m_Name: boundary1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1047914364
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047914363}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 399598268}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -8.3574, y: -27.859}
+  m_SizeDelta: {x: 56.954, y: 39.868}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1077470483
 GameObject:
   m_ObjectHideFlags: 0
@@ -6812,9 +6849,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8a03a7dfd73450e42a8edad8cdb55d7c, type: 3}
   pourAnimationImage: {fileID: 491870573}
   milkCartonImage: {fileID: 1411330046}
+  milkFillImage: {fileID: 1351601319}
   milkCartonDefault: {fileID: 21300000, guid: 21157668197cb684788eb351170afffb, type: 3}
   milkCartonPouring: {fileID: 21300000, guid: c228ceb9de6674d4fa41aaa835c248b1, type: 3}
-  milkFillImage: {fileID: 1351601319}
   currentCup: {fileID: 1627213746}
 --- !u!114 &1411330046
 MonoBehaviour:
@@ -8832,6 +8869,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 808064578}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1900715653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1900715654}
+  m_Layer: 5
+  m_Name: boundary2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1900715654
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900715653}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 399598268}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -22.825, y: -4.3884}
+  m_SizeDelta: {x: 28.0189, y: 86.809}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1930039630
 GameObject:
   m_ObjectHideFlags: 0
@@ -9945,13 +10017,15 @@ MonoBehaviour:
   milkT: {fileID: 2125562333}
   backCup: {fileID: 754584810}
   steamWand: {fileID: 337518385}
-  steamWandNormal: {fileID: 21300000, guid: b007557bbbfbf8642b6de2f57c47f061, type: 3}
-  steamWandOn: {fileID: 21300000, guid: 776633336f221754ea0bf700b2920141, type: 3}
   button: {fileID: 394221882}
-  contents: {fileID: 1627213746}
   zone: {fileID: 85562334}
   frothLine: {fileID: 1805638088}
   frontCup: {fileID: 2103148502}
+  bound2: {fileID: 1900715654}
+  bound1: {fileID: 1047914364}
+  steamWandNormal: {fileID: 21300000, guid: b007557bbbfbf8642b6de2f57c47f061, type: 3}
+  steamWandOn: {fileID: 21300000, guid: 776633336f221754ea0bf700b2920141, type: 3}
+  contents: {fileID: 1627213746}
 --- !u!1 &2103284373
 GameObject:
   m_ObjectHideFlags: 0

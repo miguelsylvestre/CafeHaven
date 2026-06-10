@@ -8,16 +8,18 @@ public class SteamWandManager : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     [SerializeField] private RectTransform milkT;
     [SerializeField] private RectTransform backCup;
     [SerializeField] private Image steamWand;
-    [SerializeField] private Sprite steamWandNormal;
-    [SerializeField] private Sprite steamWandOn;
     [SerializeField] private Button button;
-    [SerializeField] private MilkCupContents contents;
     [SerializeField] private RectTransform zone;
     [SerializeField] private RectTransform frothLine;
     [SerializeField] private RectTransform frontCup;
+    
+    [SerializeField] private RectTransform bound2;
+    [SerializeField] private RectTransform bound1;
 
+    [SerializeField] private Sprite steamWandNormal;
+    [SerializeField] private Sprite steamWandOn;
 
-
+    [SerializeField] private MilkCupContents contents;
 
     private const float time = 10f;
 
@@ -60,16 +62,25 @@ public class SteamWandManager : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     public void OnDrag(PointerEventData eventData)
     {
         if (isSteaming) return;
+        RectTransform canvasRect = canvas.transform as RectTransform;
+        Vector2 targetLocalPoint;
 
-        Vector2 localPoint;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            canvas.transform as RectTransform,
+            canvasRect,
             eventData.position,
             canvas.worldCamera,
-            out localPoint
+            out targetLocalPoint
         );
 
-        rectTransform.anchoredPosition = localPoint;
+        Vector2 validCanvasPos = ClampToLShape(targetLocalPoint, canvasRect);
+
+        if (rectTransform.parent != canvasRect)
+        {
+            Vector3 worldPos = canvasRect.TransformPoint(validCanvasPos);
+            validCanvasPos = rectTransform.parent.InverseTransformPoint(worldPos);
+        }
+
+        rectTransform.anchoredPosition = validCanvasPos;
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -90,7 +101,41 @@ public class SteamWandManager : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         {
             rectTransform.anchoredPosition = startPosition;
         }
-        
+    }
+
+    private Vector2 ClampToLShape(Vector2 targetPoint, RectTransform referenceCanvas)
+    {
+        if (bound2 == null || bound1 == null) return targetPoint;
+
+        Vector2 verticalLocal = ConvertPointBetweenRects(targetPoint, referenceCanvas, bound2);
+        Vector2 horizontalLocal = ConvertPointBetweenRects(targetPoint, referenceCanvas, bound1);
+
+        Vector2 clampedVerticalLocal = ClampToRectLocalBounds(verticalLocal, bound2);
+        Vector2 clampedHorizontalLocal = ClampToRectLocalBounds(horizontalLocal, bound1);
+
+        Vector2 validVerticalCanvas = ConvertPointBetweenRects(clampedVerticalLocal, bound2, referenceCanvas);
+        Vector2 validHorizontalCanvas = ConvertPointBetweenRects(clampedHorizontalLocal, bound1, referenceCanvas);
+
+        float distToVertical = Vector2.Distance(targetPoint, validVerticalCanvas);
+        float distToHorizontal = Vector2.Distance(targetPoint, validHorizontalCanvas);
+
+        return (distToVertical < distToHorizontal) ? validVerticalCanvas : validHorizontalCanvas;
+    }
+
+    private Vector2 ClampToRectLocalBounds(Vector2 localPoint, RectTransform targetRect)
+    {
+        Vector3[] corners = new Vector3[4];
+        targetRect.GetLocalCorners(corners);
+        return new Vector2(
+            Mathf.Clamp(localPoint.x, corners[0].x, corners[2].x),
+            Mathf.Clamp(localPoint.y, corners[0].y, corners[2].y)
+        );
+    }
+
+    private Vector2 ConvertPointBetweenRects(Vector2 point, RectTransform fromRect, RectTransform toRect)
+    {
+        Vector3 worldPos = fromRect.TransformPoint(point);
+        return toRect.InverseTransformPoint(worldPos);
     }
 
     private bool IsOverWand()
@@ -98,10 +143,8 @@ public class SteamWandManager : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         Canvas canvas = GetComponentInParent<Canvas>();
         Camera uiCamera = canvas.worldCamera;
 
-        if (uiCamera == null)
-        {
-            return false;
-        }
+        if (uiCamera == null) return false;
+        
         Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(uiCamera, transform.position);
         return RectTransformUtility.RectangleContainsScreenPoint(zone, screenPoint, uiCamera);
     }
@@ -131,14 +174,8 @@ public class SteamWandManager : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
         if (contents.milk != null)
         {
-            if (IsAboveFrothLine())
-            {
-                contents.milk.frothed = true;
-            }
-            else
-            {
-                contents.milk.steamed = true;
-            }
+            if (IsAboveFrothLine()) contents.milk.frothed = true;
+            else contents.milk.steamed = true;
         }
 
         rectTransform.anchoredPosition = startPosition;
