@@ -1606,6 +1606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CounterSwitch
   sceneName: CounterView
+  player: {fileID: 0}
 --- !u!61 &1579757818
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1909,6 +1910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CounterSwitch
   sceneName: CounterView
+  player: {fileID: 2138232607}
 --- !u!1 &1698975114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1964,10 +1966,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.022916667
+    y: 0.41111112
+    width: 0.70000005
+    height: 0.7
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -2353,7 +2355,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2048642647}
-  - component: {fileID: 2048642646}
   m_Layer: 0
   m_Name: NPCManager
   m_TagString: Untagged
@@ -2361,18 +2362,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2048642646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048642645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c227baa54e074e508704da859debc5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPCManager
 --- !u!4 &2048642647
 Transform:
   m_ObjectHideFlags: 0

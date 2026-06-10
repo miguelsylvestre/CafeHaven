@@ -7,11 +7,13 @@ public class CounterSwitch : MonoBehaviour, IInteractable
     public string sceneName;
     private bool playerIn;
     private bool hasLoadedOnce = false;
+    [SerializeField] private GameObject player;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Trigger")) {
             playerIn = true;
+            player.GetComponent<Animator>().SetBool("inLeftC", true);
             Debug.Log("player in");
         }  
     }
@@ -20,6 +22,7 @@ public class CounterSwitch : MonoBehaviour, IInteractable
     {
         if (other.CompareTag("Trigger")) {
             playerIn = false;
+            player.GetComponent<Animator>().SetBool("inLeftC", false);
             Debug.Log("player out");
         }
     }
