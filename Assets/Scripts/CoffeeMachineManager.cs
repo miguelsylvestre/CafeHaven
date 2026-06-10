@@ -50,11 +50,9 @@ public class CoffeeMachineManager : MonoBehaviour
     public void SelectIntensity(int level)
     {
         intensity = level;
-        if (cupInSlot) {
-            SetButtonInteractable(lowButton, level != 1);
-            SetButtonInteractable(mediumButton, level != 2);
-            SetButtonInteractable(highButton, level != 3);
-        }
+        SetButtonInteractable(lowButton, level != 1);
+        SetButtonInteractable(mediumButton, level != 2);
+        SetButtonInteractable(highButton, level != 3);
 
         if (intensity == 1) pourDuration = 12f;
         if (intensity == 2) pourDuration = 16f;
@@ -86,13 +84,11 @@ public class CoffeeMachineManager : MonoBehaviour
     {
         if (!isPouring && !ready)
         {   
-            cupInSlot = true;
             resetObject.SetActive(true);
         }
         else {
-            cupInSlot = false;
             resetObject.SetActive(false);
-            timerText.SetActive(false);
+            //timerText.SetActive(false);
         }
     }
 
