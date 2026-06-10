@@ -5,8 +5,10 @@ using TMPro;
 
 public class CoffeeMachineManager : MonoBehaviour
 {
+    public bool cupInSlot;
     public bool isPouring;
     public bool ready;
+    private float pourDuration;
 
     [SerializeField] private Button decafButton;
     [SerializeField] private Button regularButton;
@@ -16,7 +18,7 @@ public class CoffeeMachineManager : MonoBehaviour
     [SerializeField] private Button highButton;
 
     [SerializeField] private Button pourButton;
-    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] public GameObject timerText;
 
     [SerializeField] private GameObject resetObject;
     [SerializeField] private GameObject claimObject;
@@ -31,7 +33,7 @@ public class CoffeeMachineManager : MonoBehaviour
 
     void Start()
     {
-        // timerText.SetActive(false);
+        timerText.SetActive(false);
     }
 
 
@@ -48,11 +50,18 @@ public class CoffeeMachineManager : MonoBehaviour
     public void SelectIntensity(int level)
     {
         intensity = level;
+        if (cupInSlot) {
+            SetButtonInteractable(lowButton, level != 1);
+            SetButtonInteractable(mediumButton, level != 2);
+            SetButtonInteractable(highButton, level != 3);
+        }
 
-        SetButtonInteractable(lowButton, level != 1);
-        SetButtonInteractable(mediumButton, level != 2);
-        SetButtonInteractable(highButton, level != 3);
-
+        if (intensity == 1) pourDuration = 12f;
+        if (intensity == 2) pourDuration = 16f;
+        if (intensity == 3) pourDuration = 20f;
+        if (size == Sizes.Tall) pourDuration *= 1.5f;
+        timerText.SetActive(true);
+        updateTimeUI(pourDuration);
 
         RefreshPourButton();
     }
@@ -76,19 +85,24 @@ public class CoffeeMachineManager : MonoBehaviour
     public void resetField()
     {
         if (!isPouring && !ready)
-        {
+        {   
+            cupInSlot = true;
             resetObject.SetActive(true);
         }
-        else resetObject.SetActive(false);
+        else {
+            cupInSlot = false;
+            resetObject.SetActive(false);
+            timerText.SetActive(false);
+        }
     }
 
     private IEnumerator Pouring()
     {
-        float remaining = 12f;
+        
         resetObject.SetActive(false);
-        // timerText.setActive(true);
         isPouring = true;
         ready = false;
+        float remaining = pourDuration;
 
         while (remaining > 0f)
         {
@@ -96,7 +110,7 @@ public class CoffeeMachineManager : MonoBehaviour
             updateTimeUI(remaining);
             yield return null;
         }
-        // timerText.setActive(false);
+        timerText.SetActive(false);
         isPouring = false;
         ready = true;
         claimObject.SetActive(true);
@@ -106,7 +120,7 @@ public class CoffeeMachineManager : MonoBehaviour
     {
         int minutes = Mathf.FloorToInt(remaining / 60f);
         int seconds = Mathf.FloorToInt(remaining % 60f);
-        timerText.text = $"{minutes:00}:{seconds:00}";
+        timerText.GetComponent<TextMeshProUGUI>().text = $"{minutes:00}:{seconds:00}";
     }
 
     public void OnClaim()

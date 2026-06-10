@@ -186,6 +186,11 @@ public class CupDragging : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         img.sprite = originalHoverTargetSprite;
         img.color = new Color(img.color.r, img.color.g, img.color.b, 0f);
+        ResetDrink1.SetActive(false);
+
+        CoffeeMachineManager cmm = Panel1.GetComponent<CoffeeMachineManager>();
+        cmm.timerText.SetActive(false);
+        cmm.cupInSlot = false;
     }
 
     public void ResetRight()
@@ -197,5 +202,10 @@ public class CupDragging : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         img.sprite = originalHoverTargetSprite;
         img.color = new Color(img.color.r, img.color.g, img.color.b, 0f);
+        ResetDrink2.SetActive(false);
+
+        CoffeeMachineManager cmm = Panel2.GetComponent<CoffeeMachineManager>();
+        cmm.timerText.SetActive(false);
+        cmm.cupInSlot = false;
     }
 }
