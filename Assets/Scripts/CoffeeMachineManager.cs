@@ -25,6 +25,7 @@ public class CoffeeMachineManager : MonoBehaviour
     [SerializeField] private GameObject claimObject;
     [SerializeField] private GameObject dragObject;
     [SerializeField] private GameObject cupObject;
+    [SerializeField] private Animator pouringObject;
 
     [SerializeField] private CupDragging cupDragging;
     [SerializeField] private bool isRightPanel;
@@ -81,6 +82,11 @@ public class CoffeeMachineManager : MonoBehaviour
             }
         };
 
+
+        pouringObject.SetInteger("phase", 1);
+        if (size == Sizes.Tall) pouringObject.SetBool("tallCup", true);
+        if (size == Sizes.Small) pouringObject.SetBool("smallCup", true);
+
         pouringCoroutine = StartCoroutine(Pouring());
         SetAllButtonsInteractable(false);
         resetButton.interactable = true;
@@ -127,6 +133,8 @@ public class CoffeeMachineManager : MonoBehaviour
 
         while (remaining > 0f)
         {
+            if (1f <= pourDuration - remaining) pouringObject.SetInteger("phase", 2);
+            if (0f >= remaining - 1f) pouringObject.SetInteger("phase", 3);
             remaining -= Time.deltaTime;
             updateTimeUI(remaining);
             yield return null;
@@ -136,6 +144,7 @@ public class CoffeeMachineManager : MonoBehaviour
         isPouring = false;
         ready = true;
         claimObject.SetActive(true);
+        pouringObject.SetInteger("phase", 4);
         resetButton.interactable = false;
     }
 
