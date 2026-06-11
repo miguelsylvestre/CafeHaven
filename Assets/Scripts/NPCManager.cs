@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 
 public class NPCManager : MonoBehaviour
@@ -27,6 +28,7 @@ public class NPCManager : MonoBehaviour
     private Vector2 afterOrderPos = new Vector2(35f, 20f);
     [SerializeField] private Transform table1;
     [SerializeField] private Transform table2;
+    [SerializeField] private TMP_Text orderText;
 
     public Vector2 firstPos;
     public Vector2 LastPos;
@@ -116,6 +118,8 @@ public class NPCManager : MonoBehaviour
         NPCMovement npcm = npc.GetComponent<NPCMovement>();
         npcm.table1 = table1;
         npcm.table2 = table2;
+        OrderManager om = npc.GetComponent<OrderManager>();
+        om.orderText = orderText;
 
         NPCMovement npcMove = npc.GetComponent<NPCMovement>();
 
@@ -157,22 +161,13 @@ public class NPCManager : MonoBehaviour
         return Vector2.Distance(frontNPC.transform.position, frontPos) < 0.2f;
     }
 
-    // public void takeNPCOrder()
-    // {
-    //     if (!npcReady()) return;
+    public void takeNPCOrder()
+    {
+        if (!npcReady()) return;
 
-    //     NPCMovement orderPlaced = line[0];
-    //     line.RemoveAt(0);
-
-    //     NPCOrder order = orderPlaced.GetComponent<NPCOrder>();
-    //     Debug.Log("Order taken: " + order.drink + " + " + order.food);
-    //     order.orderTaken = true;
-
-    //     Vector2 afterOrderPos = new Vector2(35f, 20f);
-    //     inbetweenLines.Add(orderPlaced);
-    //     orderPlaced.setPath(new List<Vector2> { afterOrderPos });
-    //     updateLinePos();
-    // }
+        NPCMovement orderPlaced = line[0];
+        line.RemoveAt(0); 
+    }
 
     // public void DeliverToNPC(NPCOrder order)
     // {
