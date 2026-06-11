@@ -42,30 +42,25 @@ public class CupMenuManager : MonoBehaviour
 
         sb.AppendLine($"Type: {tempType}");
         sb.AppendLine($"Size: {d.size}");
-        sb.AppendLine($"Ice: {(d.hasIce ? "Yes" : "No")}");
+
+        if (d.hasIce)
+            sb.AppendLine("Ice: Yes");
 
         if (d.coffee != null)
-        {
             sb.AppendLine($"Coffee: intensity {d.coffee.intensity}{(d.coffee.decaf ? " (decaf)" : "")}");
-        }
 
         if (d.milk != null)
         {
             sb.AppendLine($"Milk: {d.milk.amount}ml");
             if (d.milk.steamed) sb.AppendLine($"  Steamed (quality: {d.milk.SteamQuality():P0})");
             if (d.milk.frothed) sb.AppendLine($"  Frothed (quality: {d.milk.FrothQuality():P0})");
-            if (d.milk.cold) sb.AppendLine("  Cold");
         }
 
         if (d.water != null)
-        {
-            sb.AppendLine($"Water: {d.water.amount}ml{(d.water.cold ? " (cold)" : "")}");
-        }
+            sb.AppendLine($"Water: {d.water.amount}ml");
 
         if (d.syrupFlavor != default)
-        {
             sb.AppendLine($"Syrup: {d.syrupFlavor}");
-        }
 
         infoText.text = sb.ToString();
     }

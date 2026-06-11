@@ -19,14 +19,21 @@ public class MilkPouring : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     private Milk currentMilk;
 
-    private const float FRAME_TIME = 1f / 4f; // 4 FPS
-    private const float STARTING_ML = 25f;
-    private const float MAX_ML = 208.33333f;
-    private const float MAX_PIXELS_UP = 22f; 
-    private const float POUR_SPEED_ML_PER_SEC = 16.66666f; 
+    private const float FRAME_TIME = 1f / 4f;
+
+    private const float STARTING_ML = 25f / 3f;
+    private const float ML_PER_PIXEL = 25f / 3f;
+
+    private const int MAX_PIXELS_UP = 23;
+
+    private const int FRAMES_PER_PIXEL = 2;
 
     private float frameTimer;
     private int frameIndex;
+    private int frameCounter;
+
+    private int pixelSteps;
+
     private Vector2 originalMilkPos;
 
     private enum PourState { Idle, Starting, Pouring, Ending }
@@ -35,9 +42,10 @@ public class MilkPouring : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private void Start()
     {
         originalMilkPos = milkFillImage.anchoredPosition;
-        if (milkCartonImage == null) milkCartonImage = GetComponent<Image>();
-        
-        // Sets up the static baseline frame immediately at game start
+
+        if (milkCartonImage == null)
+            milkCartonImage = GetComponent<Image>();
+
         SetStaticIdleFrame();
         ResetPour();
     }
@@ -48,11 +56,16 @@ public class MilkPouring : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (currentMilk == null)
         {
-            currentMilk = new Milk { cold = true, amount = STARTING_ML };
-            UpdateMilkVisuals();
+            currentMilk = new Milk
+            {
+                cold = true,
+                amount = STARTING_ML
+            };
+
+            PushToCup();
         }
 
-        if (milkCartonImage != null && milkCartonPouring != null)
+        if (milkCartonImage != null)
             milkCartonImage.sprite = milkCartonPouring;
 
         SetState(PourState.Starting);
@@ -70,18 +83,82 @@ public class MilkPouring : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         switch (state)
         {
-            case PourState.Starting: UpdateAnimationSequence(startFrames, PourState.Pouring); break;
-            case PourState.Pouring:  UpdatePouringLoop(); break;
-            case PourState.Ending:   UpdateAnimationSequence(endFrames, PourState.Idle); break;
+            case PourState.Starting:
+                UpdateAnimationSequence(startFrames, PourState.Pouring);
+                break;
+
+            case PourState.Pouring:
+                UpdatePouring();
+                break;
+
+            case PourState.Ending:
+                UpdateAnimationSequence(endFrames, PourState.Idle);
+                break;
+        }
+    }
+
+    private void UpdatePouring()
+    {
+        frameTimer += Time.deltaTime;
+
+        if (frameTimer >= FRAME_TIME)
+        {
+            frameTimer -= FRAME_TIME;
+
+            pourAnimationImage.sprite = pourFrames[frameIndex];
+            frameIndex = (frameIndex + 1) % pourFrames.Length;
+
+            frameCounter++;
+
+            if (frameCounter >= FRAMES_PER_PIXEL)
+            {
+                frameCounter = 0;
+                AddPixel();
+            }
+        }
+    }
+
+    private void AddPixel()
+    {
+        if (currentMilk == null) return;
+
+        if (pixelSteps >= MAX_PIXELS_UP)
+        {
+            SetState(PourState.Ending);
+            return;
+        }
+
+        pixelSteps++;
+
+        milkFillImage.anchoredPosition =
+            originalMilkPos + Vector2.up * pixelSteps;
+
+        float rawMilk =
+            STARTING_ML + (pixelSteps * ML_PER_PIXEL);
+
+        currentMilk.amount =
+            Mathf.Round(rawMilk * 100f) / 100f;
+
+        Debug.Log(currentMilk.amount);
+
+        PushToCup();
+
+        if (pixelSteps >= MAX_PIXELS_UP)
+        {
+            SetState(PourState.Ending);
+            return;
         }
     }
 
     private void UpdateAnimationSequence(Sprite[] frames, PourState nextState)
     {
         frameTimer += Time.deltaTime;
-        if (frameTimer < FRAME_TIME) return;
+
+        if (frameTimer < FRAME_TIME)
+            return;
 
         frameTimer -= FRAME_TIME;
+
         if (frameIndex < frames.Length)
         {
             pourAnimationImage.sprite = frames[frameIndex++];
@@ -92,77 +169,52 @@ public class MilkPouring : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         }
     }
 
-    private void UpdatePouringLoop()
+
+    private void PushToCup()
     {
-        frameTimer += Time.deltaTime;
-        if (frameTimer >= FRAME_TIME)
-        {
-            frameTimer -= FRAME_TIME;
-            pourAnimationImage.sprite = pourFrames[frameIndex];
-            frameIndex = (frameIndex + 1) % pourFrames.Length;
-        }
+        if (currentCup == null || currentMilk == null)
+            return;
 
-        // Add milk over time
-        currentMilk.amount += POUR_SPEED_ML_PER_SEC * Time.deltaTime;
-        currentMilk.amount = Mathf.Min(currentMilk.amount, MAX_ML);
-
-        // Update pixel-snapped position
-        UpdateMilkVisuals();
-
-        if (currentMilk.amount >= MAX_ML)
-        {
-            SetState(PourState.Ending);
-        }
-    }
-
-    private void UpdateMilkVisuals()
-    {
-        if (currentMilk == null) return;
-
-        float progress = (currentMilk.amount - STARTING_ML) / (MAX_ML - STARTING_ML);
-       
-        // FloorToInt prevents sub-pixel sliding entirely, keeping it strictly aligned
-        // with your target rate of 1 pixel per half-second (2 frames)
-        int snappedPixelsUp = Mathf.FloorToInt(MAX_PIXELS_UP * progress);
-
-        milkFillImage.anchoredPosition = originalMilkPos + Vector2.up * snappedPixelsUp;
-
-        if (currentCup != null)
-        {
-            currentCup.milk = currentMilk;
-            currentCup.UpdateVisual();
-        }
+        currentCup.milk = currentMilk;
+        currentCup.UpdateVisual();
     }
 
     private void SetState(PourState newState)
     {
         state = newState;
+
         frameIndex = 0;
         frameTimer = 0f;
+        frameCounter = 0;
 
         if (state == PourState.Idle)
         {
-            if (milkCartonImage != null && milkCartonDefault != null)
+            if (milkCartonImage != null)
                 milkCartonImage.sprite = milkCartonDefault;
-            
-            // Replaced the SetActive(false) logic to forcefully lock 
-            // the graphic back onto the final frame of the array
+
             SetStaticIdleFrame();
         }
     }
 
     private void SetStaticIdleFrame()
     {
-        if (pourAnimationImage != null && endFrames != null && endFrames.Length > 0)
+        if (pourAnimationImage != null &&
+            endFrames != null &&
+            endFrames.Length > 0)
         {
             pourAnimationImage.sprite = endFrames[endFrames.Length - 1];
         }
     }
 
+
     public void ResetPour()
     {
         currentMilk = null;
+        pixelSteps = 0;
+        frameCounter = 0;
+
         milkFillImage.anchoredPosition = originalMilkPos;
+
         SetState(PourState.Idle);
     }
 }

@@ -12,7 +12,7 @@ public class SteamWandManager : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     [SerializeField] private RectTransform zone;
     [SerializeField] private RectTransform frothLine;
     [SerializeField] private RectTransform frontCup;
-    
+
     [SerializeField] private RectTransform bound2;
     [SerializeField] private RectTransform bound1;
 
@@ -144,7 +144,7 @@ public class SteamWandManager : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         Camera uiCamera = canvas.worldCamera;
 
         if (uiCamera == null) return false;
-        
+
         Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(uiCamera, transform.position);
         return RectTransformUtility.RectangleContainsScreenPoint(zone, screenPoint, uiCamera);
     }
@@ -178,14 +178,15 @@ public class SteamWandManager : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
             if (IsAboveFrothLine())
             {
-                contents.milk.frothed = true;
-                contents.milk.frothPosition = y;
-            }
-            else
-            {
                 contents.milk.steamed = true;
                 contents.milk.steamPosition = y;
             }
+            else
+            {
+                contents.milk.frothed = true;
+                contents.milk.frothPosition = y;
+            }
+            contents.milk.cold = false;
         }
 
         rectTransform.anchoredPosition = startPosition;
