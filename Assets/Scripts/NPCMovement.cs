@@ -12,8 +12,8 @@ public class NPCMovement : MonoBehaviour
     public Animator animator;
     public bool destroy = false;
     public bool canSit;
-    private Vector2 table1 = new Vector2(53f, 31f);
-    private Vector2 table2 = new Vector2(63f, 0f);
+    public Transform table1;
+    public Transform table2;
     public bool sitting;
     public float sittingLength;
     public float sittingTimer;
@@ -54,7 +54,7 @@ public class NPCMovement : MonoBehaviour
         animator.SetBool("Moving", hasPath);
 
         if (canSit){
-            if (Vector2.Distance(transform.position, table1) < 0.1f || Vector2.Distance(transform.position, table2) < 0.1f){
+            if (Vector2.Distance(transform.position, table1.position) < 0.1f || Vector2.Distance(transform.position, table2.position) < 0.1f){
                 animator.SetBool("Sitting", true);
                 sitting = true;
             }
@@ -83,11 +83,11 @@ public class NPCMovement : MonoBehaviour
         if (num == 0)
         {
             path.Add(new Vector2(23f, 26f));
-            path.Add(table1);
+            path.Add((Vector2)(table1.position));
         }
         else
         {
-            path.Add(table2);
+            path.Add((Vector2)(table2.position));
         }
         setPath(path);
     }
