@@ -5758,7 +5758,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1250968363
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6906,7 +6906,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1525621246
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8772,12 +8772,15 @@ MonoBehaviour:
   lowButton: {fileID: 1077470485}
   mediumButton: {fileID: 20490452}
   highButton: {fileID: 1345499462}
+  resetButton: {fileID: 1392220815}
   pourButton: {fileID: 2038561241}
   timerText: {fileID: 2055833546}
   resetObject: {fileID: 148235048}
   claimObject: {fileID: 1689445259}
   dragObject: {fileID: 31187955}
   cupObject: {fileID: 223170003}
+  cupDragging: {fileID: 240649913}
+  isRightPanel: 1
 --- !u!1 &1900448670
 GameObject:
   m_ObjectHideFlags: 0
@@ -10090,12 +10093,15 @@ MonoBehaviour:
   lowButton: {fileID: 168052346}
   mediumButton: {fileID: 88460400}
   highButton: {fileID: 341558691}
+  resetButton: {fileID: 1620748278}
   pourButton: {fileID: 441954073}
   timerText: {fileID: 674409027}
   resetObject: {fileID: 43777640}
   claimObject: {fileID: 951453451}
   dragObject: {fileID: 1293729749}
   cupObject: {fileID: 223170003}
+  cupDragging: {fileID: 240649913}
+  isRightPanel: 0
 --- !u!1 &2108409161
 GameObject:
   m_ObjectHideFlags: 0

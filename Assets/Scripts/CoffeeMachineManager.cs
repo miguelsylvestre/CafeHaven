@@ -16,6 +16,7 @@ public class CoffeeMachineManager : MonoBehaviour
     [SerializeField] private Button lowButton;
     [SerializeField] private Button mediumButton;
     [SerializeField] private Button highButton;
+    [SerializeField] private Button resetButton;
 
     [SerializeField] private Button pourButton;
     [SerializeField] public GameObject timerText;
@@ -25,6 +26,10 @@ public class CoffeeMachineManager : MonoBehaviour
     [SerializeField] private GameObject dragObject;
     [SerializeField] private GameObject cupObject;
 
+    [SerializeField] private CupDragging cupDragging;
+    [SerializeField] private bool isRightPanel;
+
+    private Coroutine pouringCoroutine;
 
     private bool? isDecaf = null;
     private int intensity = 0;
@@ -34,8 +39,8 @@ public class CoffeeMachineManager : MonoBehaviour
     void Start()
     {
         timerText.SetActive(false);
+        resetButton.interactable = false;
     }
-
 
     public void SelectDecaf(bool decaf)
     {
@@ -75,26 +80,46 @@ public class CoffeeMachineManager : MonoBehaviour
                 intensity = intensity
             }
         };
-        StartCoroutine(Pouring());
 
+        pouringCoroutine = StartCoroutine(Pouring());
         SetAllButtonsInteractable(false);
+        resetButton.interactable = true;
+    }
+
+    public void OnReset()
+    {
+        if (isPouring)
+        {
+            if (pouringCoroutine != null)
+                StopCoroutine(pouringCoroutine);
+
+            isPouring = false;
+            timerText.SetActive(false);
+            SetAllButtonsInteractable(true);
+
+            if (isRightPanel)
+                cupDragging.ResetRight();
+            else
+                cupDragging.ResetLeft();
+        }
+
+        ResetPanel();
     }
 
     public void resetField()
     {
         if (!isPouring && !ready)
-        {   
+        {
             resetObject.SetActive(true);
         }
-        else {
+        else
+        {
             resetObject.SetActive(false);
-            //timerText.SetActive(false);
         }
     }
 
     private IEnumerator Pouring()
     {
-        
         resetObject.SetActive(false);
         isPouring = true;
         ready = false;
@@ -106,10 +131,12 @@ public class CoffeeMachineManager : MonoBehaviour
             updateTimeUI(remaining);
             yield return null;
         }
+
         timerText.SetActive(false);
         isPouring = false;
         ready = true;
         claimObject.SetActive(true);
+        resetButton.interactable = false;
     }
 
     private void updateTimeUI(float remaining)
@@ -122,7 +149,6 @@ public class CoffeeMachineManager : MonoBehaviour
     public void OnClaim()
     {
         if (pendingDrink == null) return;
-
 
         CupContents contents = cupObject.GetComponent<CupContents>();
         if (contents == null) return;
@@ -146,7 +172,8 @@ public class CoffeeMachineManager : MonoBehaviour
     public void RefreshPourButton()
     {
         CupDropSlot occupied = dragObject.GetComponent<CupDropSlot>();
-        pourButton.interactable = (isDecaf.HasValue && intensity != 0 && occupied.occupied);
+        pourButton.interactable = isDecaf.HasValue && intensity != 0 && occupied.occupied;
+        resetButton.interactable = isPouring || isDecaf.HasValue || intensity != 0;
     }
 
     public void UpdateSize(Sizes s)
@@ -166,6 +193,7 @@ public class CoffeeMachineManager : MonoBehaviour
         SetButtonInteractable(mediumButton, true);
         SetButtonInteractable(highButton, true);
 
+        timerText.SetActive(false);
         RefreshPourButton();
 
         claimObject.SetActive(false);
@@ -182,5 +210,5 @@ public class CoffeeMachineManager : MonoBehaviour
         pourButton.interactable = state;
     }
 
-    static void SetButtonInteractable(Button btn, bool state) => btn.interactable = state;
+    static void SetButtonInteractable(Button btn, bool state){btn.interactable = state;}
 }
