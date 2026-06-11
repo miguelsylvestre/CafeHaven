@@ -2126,10 +2126,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.015625
-    y: 0.76574075
-    width: 0.3
-    height: 0.29999998
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -2324,67 +2324,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1763055045
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 463137487925801499, guid: 6048e77d780c24678b070cf65d89f8b4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -72
-      objectReference: {fileID: 0}
-    - target: {fileID: 463137487925801499, guid: 6048e77d780c24678b070cf65d89f8b4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -63
-      objectReference: {fileID: 0}
-    - target: {fileID: 463137487925801499, guid: 6048e77d780c24678b070cf65d89f8b4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 463137487925801499, guid: 6048e77d780c24678b070cf65d89f8b4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 463137487925801499, guid: 6048e77d780c24678b070cf65d89f8b4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 463137487925801499, guid: 6048e77d780c24678b070cf65d89f8b4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 463137487925801499, guid: 6048e77d780c24678b070cf65d89f8b4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 463137487925801499, guid: 6048e77d780c24678b070cf65d89f8b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 463137487925801499, guid: 6048e77d780c24678b070cf65d89f8b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 463137487925801499, guid: 6048e77d780c24678b070cf65d89f8b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1592356859644333151, guid: 6048e77d780c24678b070cf65d89f8b4, type: 3}
-      propertyPath: m_Name
-      value: NPC
-      objectReference: {fileID: 0}
-    - target: {fileID: 6268543616758906259, guid: 6048e77d780c24678b070cf65d89f8b4, type: 3}
-      propertyPath: m_Radius
-      value: 0.4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6048e77d780c24678b070cf65d89f8b4, type: 3}
 --- !u!1 &1797387721
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,4 +3069,3 @@ SceneRoots:
   - {fileID: 1722573262}
   - {fileID: 2118764156}
   - {fileID: 2048642647}
-  - {fileID: 1763055045}

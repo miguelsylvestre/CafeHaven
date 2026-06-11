@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TallPouring2
+  m_Name: SmalPouring1
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: cebb196da371c4ff188a20373a9440cb, type: 3}
+      value: {fileID: 21300000, guid: 68b966f9c265e40699796a1e91aac7f8, type: 3}
     - time: 0.25
-      value: {fileID: 21300000, guid: c6ce596d635c64d168db0fdca76f2628, type: 3}
+      value: {fileID: 21300000, guid: ce226219f7cde438c80a5e3dbe015855, type: 3}
     - time: 0.5
-      value: {fileID: 21300000, guid: 7dac927c5cbfa4b969e99a1b50b87944, type: 3}
+      value: {fileID: 21300000, guid: 5b939e44eef804cf58639d55cca036b9, type: 3}
     - time: 0.75
-      value: {fileID: 21300000, guid: 74337c1c71fcd405080a1c0827907eb4, type: 3}
+      value: {fileID: 21300000, guid: 64a703b38b6ad48daba69bbafebdd04e, type: 3}
     attribute: m_Sprite
     path: 
     classID: 114
@@ -50,10 +50,10 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: cebb196da371c4ff188a20373a9440cb, type: 3}
-    - {fileID: 21300000, guid: c6ce596d635c64d168db0fdca76f2628, type: 3}
-    - {fileID: 21300000, guid: 7dac927c5cbfa4b969e99a1b50b87944, type: 3}
-    - {fileID: 21300000, guid: 74337c1c71fcd405080a1c0827907eb4, type: 3}
+    - {fileID: 21300000, guid: 68b966f9c265e40699796a1e91aac7f8, type: 3}
+    - {fileID: 21300000, guid: ce226219f7cde438c80a5e3dbe015855, type: 3}
+    - {fileID: 21300000, guid: 5b939e44eef804cf58639d55cca036b9, type: 3}
+    - {fileID: 21300000, guid: 64a703b38b6ad48daba69bbafebdd04e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
