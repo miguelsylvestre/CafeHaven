@@ -1,0 +1,677 @@
+fileFormatVersion: 2
+guid: dd469c664ec358e4f85350834819b51c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3825728094050549949
+    second: MilkPouringIntoSmallCup_0
+  - first:
+      213: 7392738193892642453
+    second: MilkPouringIntoSmallCup_1
+  - first:
+      213: 971825342401489429
+    second: MilkPouringIntoSmallCup_2
+  - first:
+      213: -4679319165511608927
+    second: MilkPouringIntoSmallCup_3
+  - first:
+      213: 6922476838644318627
+    second: MilkPouringIntoSmallCup_4
+  - first:
+      213: -4748036645935277579
+    second: MilkPouringIntoSmallCup_5
+  - first:
+      213: -761083978832464034
+    second: MilkPouringIntoSmallCup_6
+  - first:
+      213: -3444299625069023150
+    second: MilkPouringIntoSmallCup_7
+  - first:
+      213: -1751745776003450942
+    second: MilkPouringIntoSmallCup_8
+  - first:
+      213: 4956332630364130787
+    second: MilkPouringIntoSmallCup_9
+  - first:
+      213: -7207357220550419206
+    second: MilkPouringIntoSmallCup_10
+  - first:
+      213: -3475412710469826478
+    second: MilkPouringIntoSmallCup_11
+  - first:
+      213: 1795167881522310993
+    second: MilkPouringIntoSmallCup_12
+  - first:
+      213: 3707980570079216923
+    second: MilkPouringIntoSmallCup_13
+  - first:
+      213: -9215083917949902906
+    second: MilkPouringIntoSmallCup_14
+  - first:
+      213: 1574207092911358546
+    second: MilkPouringIntoSmallCup_15
+  - first:
+      213: -5145458173440602818
+    second: MilkPouringIntoSmallCup_16
+  - first:
+      213: 4878080134949739345
+    second: MilkPouringIntoSmallCup_17
+  - first:
+      213: 6851010164360813957
+    second: MilkPouringIntoSmallCup_18
+  - first:
+      213: 479426799833873418
+    second: MilkPouringIntoSmallCup_19
+  - first:
+      213: 4384253377789158435
+    second: MilkPouringIntoSmallCup_20
+  - first:
+      213: 7277040220681775791
+    second: MilkPouringIntoSmallCup_21
+  - first:
+      213: 8294113145550461764
+    second: MilkPouringIntoSmallCup_22
+  - first:
+      213: -2001640537745945291
+    second: MilkPouringIntoSmallCup_23
+  - first:
+      213: 1080228737167836405
+    second: MilkPouringIntoSmallCup_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 648
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f72ea619848eac0800000000000000
+      internalID: -3825728094050549949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 648
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e0f6c0838489660800000000000000
+      internalID: 7392738193892642453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 648
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51a209dfffd9c7d00800000000000000
+      internalID: 971825342401489429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 540
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a5d005d208bf0fb0800000000000000
+      internalID: -4679319165511608927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 540
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a183450204911060800000000000000
+      internalID: 6922476838644318627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_5
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 540
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f99d72a3d59b1eb0800000000000000
+      internalID: -4748036645935277579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e57337557261075f0800000000000000
+      internalID: -761083978832464034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 432
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 250ffbb5db36330d0800000000000000
+      internalID: -3444299625069023150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 432
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c7f5847f7c80b7e0800000000000000
+      internalID: -1751745776003450942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 324
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed088d744e68c440800000000000000
+      internalID: 4956332630364130787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 324
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afcdebb4bc25afb90800000000000000
+      internalID: -7207357220550419206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 324
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2588198ad8ad4cfc0800000000000000
+      internalID: -3475412710469826478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15fe3525da7b9e810800000000000000
+      internalID: 1795167881522310993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 216
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b154f99cea4657330800000000000000
+      internalID: 3707980570079216923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 216
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cf5e2f00027d1080800000000000000
+      internalID: -9215083917949902906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 108
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 252c1efa205b8d510800000000000000
+      internalID: 1574207092911358546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 108
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3d41759d09a798b0800000000000000
+      internalID: -5145458173440602818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_17
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 108
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15b919d990c62b340800000000000000
+      internalID: 4878080134949739345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d115f327da31f50800000000000000
+      internalID: 6851010164360813957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0c76e3622447a600800000000000000
+      internalID: 479426799833873418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MilkPouringIntoSmallCup_20
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 324ed64e73ff7dc30800000000000000
+      internalID: 4384253377789158435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d54437839ca5c6c49876302f3ba6de3b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":7.0},"gridSpriteSize":{"x":192.0,"y":108.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      MilkPouringIntoSmallCup_0: -3825728094050549949
+      MilkPouringIntoSmallCup_1: 7392738193892642453
+      MilkPouringIntoSmallCup_10: -7207357220550419206
+      MilkPouringIntoSmallCup_11: -3475412710469826478
+      MilkPouringIntoSmallCup_12: 1795167881522310993
+      MilkPouringIntoSmallCup_13: 3707980570079216923
+      MilkPouringIntoSmallCup_14: -9215083917949902906
+      MilkPouringIntoSmallCup_15: 1574207092911358546
+      MilkPouringIntoSmallCup_16: -5145458173440602818
+      MilkPouringIntoSmallCup_17: 4878080134949739345
+      MilkPouringIntoSmallCup_18: 6851010164360813957
+      MilkPouringIntoSmallCup_19: 479426799833873418
+      MilkPouringIntoSmallCup_2: 971825342401489429
+      MilkPouringIntoSmallCup_20: 4384253377789158435
+      MilkPouringIntoSmallCup_3: -4679319165511608927
+      MilkPouringIntoSmallCup_4: 6922476838644318627
+      MilkPouringIntoSmallCup_5: -4748036645935277579
+      MilkPouringIntoSmallCup_6: -761083978832464034
+      MilkPouringIntoSmallCup_7: -3444299625069023150
+      MilkPouringIntoSmallCup_8: -1751745776003450942
+      MilkPouringIntoSmallCup_9: 4956332630364130787
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

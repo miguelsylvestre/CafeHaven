@@ -44,7 +44,7 @@ public class CupMenuManager : MonoBehaviour
         sb.AppendLine($"Size: {d.size}");
 
         if (d.hasIce)
-            sb.AppendLine("Ice: Yes");
+            sb.AppendLine("Iced");
 
         if (d.coffee != null)
             sb.AppendLine($"Coffee: intensity {d.coffee.intensity}{(d.coffee.decaf ? " (decaf)" : "")}");
@@ -72,7 +72,7 @@ public class CupMenuManager : MonoBehaviour
         float bestScore = float.MaxValue;
         DrinkTypes bestMatch = DrinkTypes.Espresso;
 
-        foreach (DrinkTypes type in System.Enum.GetValues(typeof(DrinkTypes)))
+        foreach (DrinkTypes type in new[] { DrinkTypes.Espresso, DrinkTypes.Latte, DrinkTypes.IcedLatte, DrinkTypes.Cappuccino })
         {
             Drink recipe = Recipes.GetRecipe(type, cup.drink.size);
             float score = CompareDrinkToRecipe(drink, recipe);

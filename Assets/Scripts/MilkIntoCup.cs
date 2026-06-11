@@ -9,8 +9,12 @@ public class MilkIntoCup : MonoBehaviour
     [SerializeField] private Image animationImage;
     [SerializeField] private Image milkBack;
     [SerializeField] private Image milkFront;
-    [SerializeField] private Image frame1;
-    [SerializeField] private Sprite[] animationFrames;
+    [SerializeField] private Image frame;
+    [SerializeField] private Sprite Frame2;
+    [SerializeField] private Sprite Frame1;
+    [SerializeField] private Sprite[] animationFrames1;
+    [SerializeField] private Sprite[] animationFrames2;
+    private Sprite[] animationFrames;
     [SerializeField] private float heightMin;
     [SerializeField] private float heightMax;
     private Image selfImage;
@@ -30,7 +34,22 @@ public class MilkIntoCup : MonoBehaviour
     {
         contents = milkCupObject.GetComponent<MilkCupContents>();
         selfImage = GetComponent<Image>();
+        if (cupContents.drink.size == Sizes.Tall)
+        {
+            frame.sprite = Frame1;
+        } else
+        {
+            frame.sprite = Frame2;
+        }
         UpdateHeight();
+        if (cupContents.drink.size == Sizes.Tall)
+        {
+            animationFrames = animationFrames1;
+        }
+        else
+        {
+            animationFrames = animationFrames2;
+        }
     }
 
     private bool CanPour()
@@ -45,10 +64,11 @@ public class MilkIntoCup : MonoBehaviour
     {
         UpdateHeight();
 
+
         if (!isPlaying)
         {
-            if (frame1 != null)
-                frame1.gameObject.SetActive(cupContents != null && cupContents.filled);
+            if (frame != null)
+                frame.gameObject.SetActive(cupContents != null && cupContents.filled);
 
             if (Input.GetMouseButtonDown(0))
             {
