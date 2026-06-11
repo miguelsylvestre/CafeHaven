@@ -174,8 +174,18 @@ public class SteamWandManager : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
         if (contents.milk != null)
         {
-            if (IsAboveFrothLine()) contents.milk.frothed = true;
-            else contents.milk.steamed = true;
+            float y = milkT.position.y;
+
+            if (IsAboveFrothLine())
+            {
+                contents.milk.frothed = true;
+                contents.milk.frothPosition = y;
+            }
+            else
+            {
+                contents.milk.steamed = true;
+                contents.milk.steamPosition = y;
+            }
         }
 
         rectTransform.anchoredPosition = startPosition;

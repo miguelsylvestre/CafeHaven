@@ -29,7 +29,7 @@ public class Recipes
                 milk =
                     new Milk
                     {
-                        amount = 175,
+                        amount = 125,
                         steamed = true,
                     }
             }
@@ -49,7 +49,7 @@ public class Recipes
                 milk =
                     new Milk
                     {
-                        amount = 200,
+                        amount = 150,
                         cold = true
                     }
             }
@@ -87,7 +87,7 @@ public class Recipes
                 water =
                     new Water
                     {
-                        amount = 150,
+                        amount = 100,
                     }
             }
         },
@@ -106,7 +106,7 @@ public class Recipes
                 water =
                     new Water
                     {
-                        amount = 150,
+                        amount = 100,
                         cold = true
                     }
             }
