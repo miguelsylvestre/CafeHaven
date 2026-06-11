@@ -59,7 +59,7 @@ public class CupMenuManager : MonoBehaviour
         if (d.water != null)
             sb.AppendLine($"Water: {d.water.amount}ml");
 
-        if (d.syrupFlavor != default)
+        if (d.syrupFlavor != null || d.syrupFlavor != default)
             sb.AppendLine($"Syrup: {d.syrupFlavor}");
 
         infoText.text = sb.ToString();
